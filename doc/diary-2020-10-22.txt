@@ -1,0 +1,37 @@
+Do, 22 Oktober 2020
+Teilnehmer: Daniel, Georgiana, Norman, Roberto
+Uhrzeit: 10.20 - 14.20
+
+Storyboards Besprechung
+* Hauptakteuren: Arzt, Pflege 
+* Sekundären Akteuren: Patient 
+Hierarchie zwischen Ärzte:
+* Besprechung von Medikamenten (A,B) um die Hierarchie von Ärzte zu machen. Eine Arzt verschreibt B Medikament und ein anderen Arzt ein Medikament Typ A verschreibt
+Tools für Prototyp:
+* Visio
+* Jeder macht einen Prototyp mit erwünschtem Tool. Am Dienstag vergleichen wir die Varianten und die beste Lösung wählen
+Dokumentation:
+* Vorlage definieren 
+* Daniel fand eine gute Vorlage für der Grunddokument
+Interview:
+* Die Interviewpartnern per Email um einen Termin gebetet
+Konkurrenz anschauen:
+* Gibt es solche Apps?
+* Was könnten wir besser machen als die?
+* Kurz beschreiben was die machen
+* Es gibt schon viele, aber die sind mehr Patient orientiert
+
+Personas:
+* Personas bearbeitet
+Individueller Arbeit an verschiedene Aufgaben
+
+TO Dos:
+Bis Dienstag: 
+* Storyboards fertigmachen 
+* Gedanken machen von Prototyp Varianten
+* Literatur durchkämen 
+* Interview durchführen  
+
+Präsentation: 
+- Schrift auf Englisch
+- Sprechen auf Deutsch 
