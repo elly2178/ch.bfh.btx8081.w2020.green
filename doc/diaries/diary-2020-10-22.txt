@@ -3,8 +3,8 @@ Teilnehmer: Daniel, Georgiana, Norman, Roberto
 Uhrzeit: 10.20 - 14.20
 
 Storyboards Besprechung
-* Hauptakteuren: Arzt, Pflege 
-* Sekundären Akteuren: Patient 
+* Hauptakteure: Arzt, Pflege 
+* Sekundären Akteure: Patient 
 Hierarchie zwischen Ärzte:
 * Besprechung von Medikamenten (A,B) um die Hierarchie von Ärzte zu machen. Eine Arzt verschreibt B Medikament und ein anderen Arzt ein Medikament Typ A verschreibt
 Tools für Prototyp:
@@ -14,12 +14,12 @@ Dokumentation:
 * Vorlage definieren 
 * Daniel fand eine gute Vorlage für der Grunddokument
 Interview:
-* Die Interviewpartnern per Email um einen Termin gebetet
+* Die Interviewpartner per Email um einen Termin gebeten
 Konkurrenz anschauen:
 * Gibt es solche Apps?
 * Was könnten wir besser machen als die?
 * Kurz beschreiben was die machen
-* Es gibt schon viele, aber die sind mehr Patient orientiert
+* Es gibt schon viele, aber die sind mehr am Patienten orientiert
 
 Personas:
 * Personas bearbeitet
@@ -27,7 +27,7 @@ Individueller Arbeit an verschiedene Aufgaben
 
 TO Dos:
 Bis Dienstag: 
-* Storyboards fertigmachen 
+* Storyboards fertigmachen
 * Gedanken machen von Prototyp Varianten
 * Literatur durchkämen 
 * Interview durchführen  
