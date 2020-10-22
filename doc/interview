@@ -2,20 +2,38 @@ Zweck:
 
 (1) Was sind die Herausforderungen, wenn Daten zu psychischen Erkrankungen erfragt werden?
 
+=>
+
+--
+
 (2) Gibt es Unterschiede bei der Anamnese von physischen und psychischen Erkrankungen?
 Wenn ja, welche sind das?
+
+=>
+
+--
 
 (3) Was sind besondere Daten, also krankheitspezifische Angaben, die beim Patienten / bei 
 der Patientin erfragt werden müssen?
 
+=>
+
+--
+
 (4) Bezüglich Zwangsstörungen: Wann gilt ein Patient / eine Patientin als gefährlich?
+
+=>
+
+--
 
 (5) Um die Diagnose stellen zu können, müssen diverse Bedingungen erfüllt sein. 
 Diese lassen sich überprüfen, in dem man eine Rating-Skala hinzuzieht, z.B. die Yale-Brown 
 Obsessive Scale (Y-BOCS). Macht es Sinn, ein UI auf Basis einer solchen Skala aufzubauen? 
 
+=>
 
+--
 
 Mögliche Interviewpartner:
-- Dr. Jürgen Holm (?)
+- Dr. Jürgen Holm
 - Dr. Michael Lehmann
