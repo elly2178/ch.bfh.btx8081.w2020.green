@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/doc/Personas-Exmamples-Alex" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Personas-Exmamples-Alex" afterDir="false" />
-    </list>
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Just formatting some text" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,11 +51,47 @@
       <option name="presentableId" value="Default" />
       <updated>1603583398446</updated>
       <workItem from="1603583406469" duration="11000" />
-      <workItem from="1603583435606" duration="73000" />
+      <workItem from="1603583435606" duration="147000" />
     </task>
+    <task id="LOCAL-00001" summary="Just formatting some text">
+      <created>1603583548267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603583548267</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Just formatting some text">
+      <created>1603583572297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603583572297</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Just formatting some text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just formatting some text" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603583574529">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603583574529" />
   </component>
 </project>
