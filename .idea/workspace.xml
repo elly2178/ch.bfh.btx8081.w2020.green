@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Just formatting some text">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Second Storyboard from Alex is done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +42,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc/storyboards" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -55,7 +60,10 @@
       <workItem from="1603583406469" duration="11000" />
       <workItem from="1603583435606" duration="147000" />
       <workItem from="1603583588391" duration="81000" />
-      <workItem from="1603643985516" duration="206000" />
+      <workItem from="1603643985516" duration="504000" />
+      <workItem from="1603646913863" duration="115000" />
+      <workItem from="1603648211853" duration="28000" />
+      <workItem from="1603648588142" duration="226000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -78,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603583618491</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Second Storyboard from Alex is done.">
+      <created>1603646544203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603646544203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,12 +114,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Just formatting some text" />
     <MESSAGE value="Commit Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Test" />
+    <MESSAGE value="Second Storyboard from Alex is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Storyboard from Alex is done." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603583620509">
+    <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603646739902">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603583620509" />
+    <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.978@0.23.1680.978" timestamp="1603646739902" />
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603646548594">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603646548594" />
+    <state x="541" y="144" width="598" height="735" key="find.popup" timestamp="1603648601602">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="541" y="144" width="598" height="735" key="find.popup/0.23.1680.978@0.23.1680.978" timestamp="1603648601602" />
   </component>
 </project>
