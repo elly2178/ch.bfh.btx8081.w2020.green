@@ -4,20 +4,20 @@ Uhrzeit: 10.20 - 14.20
 
 Storyboards Besprechung
 * Hauptakteure: Arzt, Pflege 
-* Sekundären Akteure: Patient 
-Hierarchie zwischen Ärzte:
-* Besprechung von Medikamenten (A,B) um die Hierarchie von Ärzte zu machen. Eine Arzt verschreibt B Medikament und ein anderen Arzt ein Medikament Typ A verschreibt
-Tools für Prototyp:
+* Sekundï¿½ren Akteure: Patient 
+Hierarchie zwischen ï¿½rzte:
+* Besprechung von Medikamenten (A,B) um die Hierarchie von ï¿½rzte zu machen. Eine Arzt verschreibt B Medikament und ein anderen Arzt ein Medikament Typ A verschreibt
+Tools fï¿½r Prototyp:
 * Visio
-* Jeder macht einen Prototyp mit erwünschtem Tool. Am Dienstag vergleichen wir die Varianten und die beste Lösung wählen
+* Jeder macht einen Prototyp mit erwï¿½nschtem Tool. Am Dienstag vergleichen wir die Varianten und die beste Lï¿½sung wï¿½hlen
 Dokumentation:
 * Vorlage definieren 
-* Daniel fand eine gute Vorlage für der Grunddokument
+* Daniel fand eine gute Vorlage fï¿½r der Grunddokument
 Interview:
 * Die Interviewpartner per Email um einen Termin gebeten
 Konkurrenz anschauen:
 * Gibt es solche Apps?
-* Was könnten wir besser machen als die?
+* Was kï¿½nnten wir besser machen als die?
 * Kurz beschreiben was die machen
 * Es gibt schon viele, aber die sind mehr am Patienten orientiert
 
@@ -29,9 +29,11 @@ TO Dos:
 Bis Dienstag: 
 * Storyboards fertigmachen
 * Gedanken machen von Prototyp Varianten
-* Literatur durchkämen 
-* Interview durchführen  
+* Literatur durchkï¿½men 
+* Interview durchfï¿½hren  
 
-Präsentation: 
+Prï¿½sentation: 
 - Schrift auf Englisch
-- Sprechen auf Deutsch 
+- Sprechen auf Deutsch
+
+Keeping it real, smal

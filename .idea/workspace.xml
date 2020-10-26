@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Second Storyboard from Alex is done.">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Typo corrections and adjustments.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/diaries/diary-2020-10-22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/diaries/diary-2020-10-22.txt" afterDir="false" />
     </list>
+    <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,12 +49,27 @@
       <recent name="$PROJECT_DIR$/doc/storyboards" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="" />
+      <changelist id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="" />
       <created>1603583398446</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -63,7 +80,13 @@
       <workItem from="1603643985516" duration="504000" />
       <workItem from="1603646913863" duration="115000" />
       <workItem from="1603648211853" duration="28000" />
-      <workItem from="1603648588142" duration="226000" />
+      <workItem from="1603648588142" duration="480000" />
+      <workItem from="1603650887736" duration="93000" />
+      <workItem from="1603651652393" duration="41000" />
+      <workItem from="1603657408416" duration="51000" />
+      <workItem from="1603673214935" duration="962000" />
+      <workItem from="1603697327588" duration="350000" />
+      <workItem from="1603722374595" duration="982000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -93,11 +116,25 @@
       <option name="project" value="LOCAL" />
       <updated>1603646544203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Typo corrections and adjustments.">
+      <created>1603650089082</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603650089082</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Restore">
+      <created>1603723133253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603723133253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -115,20 +152,38 @@
     <MESSAGE value="Just formatting some text" />
     <MESSAGE value="Commit Test" />
     <MESSAGE value="Second Storyboard from Alex is done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Storyboard from Alex is done." />
+    <MESSAGE value="Typo corrections and adjustments." />
+    <MESSAGE value="Restore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603646739902">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.978@0.23.1680.978" timestamp="1603646739902" />
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603646548594">
+    <state x="528" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603697240457">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603646548594" />
+    <state x="528" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.978@0.23.1680.978" timestamp="1603697240457" />
+    <state x="663" y="432" key="VCS.ChangelistChooser" timestamp="1603723044425">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="663" y="432" key="VCS.ChangelistChooser/0.23.1680.978@0.23.1680.978" timestamp="1603723044425" />
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603723136258">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603723136258" />
+    <state x="100" y="123" width="1480" height="778" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603723072647">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="100" y="123" width="1480" height="778" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1680.978@0.23.1680.978" timestamp="1603723072647" />
     <state x="541" y="144" width="598" height="735" key="find.popup" timestamp="1603648601602">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="541" y="144" width="598" height="735" key="find.popup/0.23.1680.978@0.23.1680.978" timestamp="1603648601602" />
+    <state x="476" y="307" key="git4idea.merge.GitPullDialog" timestamp="1603697230791">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="476" y="307" key="git4idea.merge.GitPullDialog/0.23.1680.978@0.23.1680.978" timestamp="1603697230791" />
   </component>
 </project>
