@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Typo corrections and adjustments.">
+      <change afterPath="$PROJECT_DIR$/doc/prototypes/DoctorView.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Logo.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/doc/assets/Logo.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Personas-Exmamples-Alex" beforeDir="false" afterPath="$PROJECT_DIR$/doc/assets/Personas-Exmamples-Alex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/diaries/diary-2020-10-26" beforeDir="false" afterPath="$PROJECT_DIR$/doc/diaries/diary-2020-10-26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/interview" beforeDir="false" afterPath="$PROJECT_DIR$/doc/assets/interview" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,13 +57,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,7 +95,8 @@
       <workItem from="1603657408416" duration="51000" />
       <workItem from="1603673214935" duration="962000" />
       <workItem from="1603697327588" duration="350000" />
-      <workItem from="1603722374595" duration="5890000" />
+      <workItem from="1603722374595" duration="6022000" />
+      <workItem from="1603815232333" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -140,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603726625037</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Typo corrections and adjustments.">
+      <created>1603731998464</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603731998464</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Typo corrections and adjustments.">
+      <created>1603732053635</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603732053635</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +184,7 @@
     <MESSAGE value="Commit Test" />
     <MESSAGE value="Second Storyboard from Alex is done." />
     <MESSAGE value="Restore" />
+    <MESSAGE value="Protocol for 20201026 added." />
     <MESSAGE value="Typo corrections and adjustments." />
     <option name="LAST_COMMIT_MESSAGE" value="Typo corrections and adjustments." />
   </component>
@@ -179,10 +201,10 @@
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="663" y="432" key="VCS.ChangelistChooser/0.23.1680.978@0.23.1680.978" timestamp="1603723044425" />
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603726631058">
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603732083128">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603726631058" />
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603732083128" />
     <state x="100" y="123" width="1480" height="778" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603723072647">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
