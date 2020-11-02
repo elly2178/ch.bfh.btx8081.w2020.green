@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Typo corrections and adjustments.">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Domain Model Alex">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
@@ -48,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc/task02" />
       <recent name="$PROJECT_DIR$/doc/storyboards" />
     </key>
   </component>
@@ -84,7 +85,9 @@
       <workItem from="1604090593981" duration="34000" />
       <workItem from="1604095618218" duration="17000" />
       <workItem from="1604208907119" duration="624000" />
-      <workItem from="1604235945339" duration="766000" />
+      <workItem from="1604235945339" duration="1832000" />
+      <workItem from="1604333643561" duration="316000" />
+      <workItem from="1604334529332" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -149,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603732053635</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Domain Model Alex">
+      <created>1604330638375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604330638375</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +184,8 @@
     <MESSAGE value="Restore" />
     <MESSAGE value="Protocol for 20201026 added." />
     <MESSAGE value="Typo corrections and adjustments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Typo corrections and adjustments." />
+    <MESSAGE value="Domain Model Alex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Domain Model Alex" />
   </component>
   <component name="WindowStateProjectService">
     <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603726571156">
@@ -189,10 +200,10 @@
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="663" y="432" key="VCS.ChangelistChooser/0.23.1680.978@0.23.1680.978" timestamp="1603723044425" />
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603732083128">
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604330640713">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1603732083128" />
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1604330640713" />
     <state x="100" y="123" width="1480" height="778" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603723072647">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
