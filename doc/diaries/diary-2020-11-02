@@ -1,0 +1,23 @@
+Mo, 2. November 2020
+Teilnehmer: Daniel, Georgiana, Norman, Roberto
+Uhrzeit: 17:00 - 18:00 Uhr
+
+Traktanden:
+* Besprechung der Domain Models und Einigung auf eine Variante für die feinere Ausarbeit
+* Weiteres Vorgehen Sequenzdiagramme
+
+Beschlüsse:
+
+Domain Models
+* Alle verfolgten einen ähnlichen Ansatz, die Unterschiede waren eher klen
+* Einigung auf domain_model_2.png (Alex) mit folgenden Anpassungen:
+- Methoden entfernen, um dem Domain Model zu entsprechen
+- Attribute auf das Wesentliche ergänzen
+- Umbenennung einzelner Models
+- Entfernen von Hospital Chain
+- Schreibfehler korrigieren
+- Models sauber anordnen
+- Responsibilities und Collaborations von Georgiana übernehmen und anpassen
+
+Sequenzdiagramm
+* Wird am Mittwoch vor/im/nach Unterricht besprochen
