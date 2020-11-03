@@ -12,8 +12,8 @@ Domain Models
 * Alle verfolgten einen ähnlichen Ansatz, die Unterschiede waren eher klen
 * Einigung auf domain_model_2.png (Alex) mit folgenden Anpassungen:
 - Methoden entfernen, um dem Domain Model zu entsprechen
-- Attribute auf das Wesentliche ergänzen
-- Umbenennung einzelner Models
+- Attribute auf das Wesentliche reduzieren
+- Umbenennung einzelner Models (z.B. Branche -> Branch)
 - Entfernen von Hospital Chain
 - Schreibfehler korrigieren
 - Models sauber anordnen
