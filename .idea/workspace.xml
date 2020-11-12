@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added VisualParadigm VPP File.">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/diaries/diary-2020-11-11" beforeDir="false" afterPath="$PROJECT_DIR$/doc/diaries/diary-2020-11-11" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,6 +211,10 @@
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="107" y="124" width="1466" height="776" key="DiffContextDialog/0.23.1680.978@0.23.1680.978" timestamp="1604419388952" />
+    <state x="168" y="109" key="MergeDialog" timestamp="1605111924430">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state x="168" y="109" key="MergeDialog/0.23.1680.974@0.23.1680.974" timestamp="1605111924430" />
     <state x="663" y="432" key="VCS.ChangelistChooser" timestamp="1603723044425">
       <screen x="0" y="23" width="1680" height="978" />
     </state>

@@ -7,5 +7,17 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/doc/task02/DomainModelLeafHospital.vpp</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="DomainModelLeafHospital [2]" uuid="922631cb-7df7-4e9a-9753-b53418f9402b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task02\domain_models\DomainModelLeafHospital.vpp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="DomainModelLeafHospital.vpp" uuid="c5bd8fa0-2aff-4b8c-8f69-eac890ecd025">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task02\domain_models\DomainModelLeafHospital.vpp.bak_001d</jdbc-url>
+    </data-source>
   </component>
 </project>
