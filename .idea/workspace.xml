@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added VisualParadigm VPP File.">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="diary-2020-11-11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/diaries/diary-2020-11-11" beforeDir="false" afterPath="$PROJECT_DIR$/doc/diaries/diary-2020-11-11" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +90,7 @@
       <workItem from="1604333643561" duration="316000" />
       <workItem from="1604334529332" duration="355000" />
       <workItem from="1604395017056" duration="420000" />
+      <workItem from="1605147877880" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -169,7 +169,28 @@
       <option name="project" value="LOCAL" />
       <updated>1604337029057</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="diary-2020-11-11">
+      <created>1605112000578</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605112000578</updated>
+    </task>
+    <task id="LOCAL-00013" summary="diary-2020-11-11">
+      <created>1605112020653</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605112020653</updated>
+    </task>
+    <task id="LOCAL-00014" summary="diary-2020-11-11">
+      <created>1605112026269</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605112026269</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +217,8 @@
     <MESSAGE value="Typo corrections and adjustments." />
     <MESSAGE value="Domain Model Alex" />
     <MESSAGE value="Added VisualParadigm VPP File." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added VisualParadigm VPP File." />
+    <MESSAGE value="diary-2020-11-11" />
+    <option name="LAST_COMMIT_MESSAGE" value="diary-2020-11-11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="532" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603726571156">
@@ -219,9 +241,10 @@
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state x="663" y="432" key="VCS.ChangelistChooser/0.23.1680.978@0.23.1680.978" timestamp="1603723044425" />
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604337033429">
-      <screen x="0" y="23" width="1680" height="978" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605112003116">
+      <screen x="0" y="23" width="1680" height="974" />
     </state>
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.974@0.23.1680.974" timestamp="1605112003116" />
     <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1604337033429" />
     <state x="100" y="123" width="1480" height="778" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603723072647">
       <screen x="0" y="23" width="1680" height="978" />
