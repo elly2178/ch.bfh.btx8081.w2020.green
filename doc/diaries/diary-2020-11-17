@@ -1,18 +1,16 @@
-Mo, 16. November 2020
+Di, 17. November 2020
 Teilnehmer: Daniel, Georgiana, Roberto, Norman
-Uhrzeit: 18:00 - 20:00 Uhr
+Uhrzeit: 15:00 - 16:00 Uhr
 
 Traktanden:
-* Aufgabenaufteilung
-* N√§chster Termin
+* ‹berarbeitung des Klassendiagramms resp. Integration des MVP Pattern
+* Vorbereitung der Pr‰sentation
 
-Beschl√ºsse:
+Beschl¸sse:
+* Anpassung des Klassendiagramms
+* Aufgabenaufteilung f¸r die Pr‰sentation
+	- Roberto: Deployment Diagram '1
+	- Daniel: Component Diagram  '1
+	- Georgiana & Alex: Class Diagramm '3
 
-* Aufgabenaufteilung
-- Class Diagram besprechung (Alle) -> FallIDs Ja/Nein
-                                      ReferalDocumentation (Vielleicht in einem weiteren Sprint).
-- Deployment Diagram (Alle) -> Jetty als Server erg√§nzt.
-- Component Diagram (Alle)
-
-N√§chster Termin: Di.17.11.2021 ca 15:00
-
+N‰chster Termin: Mi.18.11.2021 um 14:25 Uhr
