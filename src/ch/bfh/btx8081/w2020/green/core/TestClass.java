@@ -1,7 +1,7 @@
 package ch.bfh.btx8081.w2020.green.core;
 
-public class TestClass {
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-    Gender g = new Gender();
-
+public class TestClass extends VerticalLayout {
+	
 }
