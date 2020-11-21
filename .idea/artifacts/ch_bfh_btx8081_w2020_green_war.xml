@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch.bfh.btx8081.w2020.green:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch.bfh.btx8081.w2020.green</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helloworld-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch.bfh.btx8081.w2020.green:war exploded" />
+    </root>
+  </artifact>
+</component>
