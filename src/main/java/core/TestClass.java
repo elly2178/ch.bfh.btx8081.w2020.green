@@ -1,4 +1,4 @@
-package ch.bfh.btx8081.w2020.green.core;
+package core;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
