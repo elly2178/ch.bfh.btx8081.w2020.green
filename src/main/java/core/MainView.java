@@ -21,6 +21,6 @@ public class MainView extends VerticalLayout {
     	//horizontal.addComponent(new Textfield("+ Add New Patient"));
         Button button = new Button("Click me",
                 event -> Notification.show("Clicked!"));
-        add(button);
+        add(vertical, button);
     }
 }
