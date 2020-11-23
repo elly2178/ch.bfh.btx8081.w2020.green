@@ -14,6 +14,11 @@ import com.vaadin.flow.server.PWA;
 public class MainView extends VerticalLayout {
 
     public MainView() {
+    	VerticalLayout vertical = new VerticalLayout ();
+    	//HorizontalLayout horizontal = new HorizontalLayout ();
+    	//vertical.addComponent(horizontal);
+    	//horizontal.addComponent(new Textfield("Patient Search"));
+    	//horizontal.addComponent(new Textfield("+ Add New Patient"));
         Button button = new Button("Click me",
                 event -> Notification.show("Clicked!"));
         add(button);
