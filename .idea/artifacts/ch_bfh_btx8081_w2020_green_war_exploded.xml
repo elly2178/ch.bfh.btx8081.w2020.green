@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ch.bfh.btx8081.w2020.green:war exploded">
-    <output-path>$PROJECT_DIR$/target/helloworld-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/ch.bfh.btx8081.w2020.green-0.0.1-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -85,7 +85,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/helloworld-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/ch.bfh.btx8081.w2020.green-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="ch.bfh.btx8081.w2020.green/web/Web" />
     </root>
