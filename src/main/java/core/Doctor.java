@@ -1,4 +1,7 @@
 package core;
 
-public class Doctor {
+/**
+ * Class representing a doctor.
+ */
+public class Doctor extends Person {
 }

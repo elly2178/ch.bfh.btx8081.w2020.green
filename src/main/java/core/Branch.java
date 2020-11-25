@@ -1,40 +1,29 @@
 package core;
 
+/**
+ * Class representing a branch.
+ */
 public class Branch {
 
-    private String branchName;
-    private int phoneNumber;
-    private int id;
-    private Branch(){
+	private String branchName;
+	private int phoneNumber;
+	private int id;
 
-    }
+	public Branch(int id, String branchName, int phoneNumber) {
+		this.id = id;
+		this.branchName = branchName;
+		this.phoneNumber = phoneNumber;
+	}
 
-    public Branch(int id,String branchName, int phoneNumber){
-        this.branchName = branchName;
-        this.phoneNumber = phoneNumber;
-    }
+	public String getBranchName() {
+		return branchName;
+	}
 
-    public String getBranchName() {
-        return branchName;
-    }
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
 
-    public void setBranchName(String branchName) {
-        this.branchName = branchName;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 }
