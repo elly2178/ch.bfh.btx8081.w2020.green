@@ -36,24 +36,20 @@ public class HomeView extends VerticalLayout {
 		MenuBar menuBar = new MenuBar();
 		menuBar.setOpenOnHover(true);
 
-		Text selected = new Text("");
-		Div message = new Div(new Text("Selected: "), selected);
-
 		MenuItem patients = menuBar.addItem("Patients");
-		menuBar.addItem("Login", e -> selected.setText("Login")); // navigate to LoginView
+		menuBar.addItem("Login", e -> getUI().get().navigate("login"));
 
 		SubMenu patientsSubMenu = patients.getSubMenu();
-		patientsSubMenu.addItem("Diaries", e -> selected.setText("Diaries")); // navigate to DiaryView
-		patientsSubMenu.addItem("Add", e -> selected.setText("Add")); // navigate to AddPatientView
+		patientsSubMenu.addItem("Diaries", e -> getUI().get().navigate("diary"));
+		patientsSubMenu.addItem("Add", e -> getUI().get().navigate("add"));
 
-		add(menuBar, message);
-		routerLink();
+		add(menuBar);
 	}
 
 	void routerLink() {
 		Div menu = new Div();
 		menu.add(new RouterLink("Home", HomeView.class));
 		menu.add(new RouterLink("Login", LoginView.class));
-//		menu.add(new RouterLink("Greeting", GreetingComponent.class, "default"));
+		// menu.add(new RouterLink("Greeting", GreetingComponent.class, "default"));
 	}
 }
