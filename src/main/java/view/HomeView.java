@@ -1,4 +1,4 @@
-package core;
+package view;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
@@ -11,16 +11,17 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
 
 /**
  * The main view contains a button and a click listener.
  */
 @Route("")
-@PWA(name = "Project Base for Vaadin", shortName = "Project Base")
-public class MainView extends VerticalLayout {
+@PWA(name = "Vaadin Main Page", shortName = "Home")
+public class HomeView extends VerticalLayout {
 
-	public MainView() {
+	public HomeView() {
 		createMenuBar();
 		VerticalLayout vertical = new VerticalLayout();
 		HorizontalLayout horizontal = new HorizontalLayout();
@@ -33,6 +34,8 @@ public class MainView extends VerticalLayout {
 
 	private void createMenuBar() {
 		MenuBar menuBar = new MenuBar();
+		menuBar.setOpenOnHover(true);
+
 		Text selected = new Text("");
 		Div message = new Div(new Text("Selected: "), selected);
 
@@ -44,5 +47,13 @@ public class MainView extends VerticalLayout {
 		patientsSubMenu.addItem("Add", e -> selected.setText("Add")); // navigate to AddPatientView
 
 		add(menuBar, message);
+		routerLink();
+	}
+
+	void routerLink() {
+		Div menu = new Div();
+		menu.add(new RouterLink("Home", HomeView.class));
+		menu.add(new RouterLink("Login", LoginView.class));
+//		menu.add(new RouterLink("Greeting", GreetingComponent.class, "default"));
 	}
 }
