@@ -13,6 +13,7 @@ public abstract class Person {
 	private Address address;
 	private String email;
 
+	// private enum Gender { MALE, FEMALE}
 	public String getFirstName() {
 		return firstName;
 	}
