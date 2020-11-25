@@ -1,4 +1,4 @@
-package core;
+package common;
 
 /**
  * Class representing a company.
