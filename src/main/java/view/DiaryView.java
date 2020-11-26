@@ -16,21 +16,24 @@ import com.vaadin.flow.router.Route;
 public class DiaryView extends VerticalLayout {
 
 	public DiaryView() {
-		TextArea textArea = new TextArea("Tagebuch");
-		textArea.setPlaceholder("Bitte schildere deinen heutigen Tagesablauf");
+		createDiaryTextArea();
+	}
 
-		Text selected = new Text("");
+	private void createDiaryTextArea() {
+		TextArea textArea = new TextArea("Tagebuch");
+		textArea.getStyle().set("minHeight", "150px");
+		textArea.setPlaceholder("Bitte schildere deinen heutigen Tagesablauf");
 
 		Button saveButton = new Button("Speichern");
 
 		add(textArea, saveButton);
 
 		saveButton.addClickListener(e -> {
-			selected.setText(textArea.getValue());
+			Text newEntry = new Text("");
+			newEntry.setText(textArea.getValue());
 			String textPattern = String.format("Tagebucheintrag vom %s: ", LocalDate.now().toString());
-			Div diaryEntry = new Div(new Text(textPattern), selected);
-			add(diaryEntry);
+			Div diaryEntryDiv = new Div(new Text(textPattern), newEntry);
+			add(diaryEntryDiv);
 		});
 	}
-
 }
