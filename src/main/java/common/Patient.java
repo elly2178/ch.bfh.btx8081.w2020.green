@@ -8,5 +8,5 @@ import java.util.List;
 public class Patient extends Person {
 	private int pid;
 	private String healthInsuranceName;
-	private List<Diary> diaries = new ArrayList<>;
+//	private List<Diary> diaries = new ArrayList<>;
 }
