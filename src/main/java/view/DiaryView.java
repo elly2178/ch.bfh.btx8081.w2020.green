@@ -9,13 +9,13 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.router.Route;
 
-import view.common.MenuBarView;
+import view.common.NavigationView;
 
 /**
  * Diary view for patients to add new diary entries.
  */
 @Route("diary")
-public class DiaryView extends MenuBarView {
+public class DiaryView extends NavigationView {
 
 	public DiaryView() {
 		createDiaryTextArea();

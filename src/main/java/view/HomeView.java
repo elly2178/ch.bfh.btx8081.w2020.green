@@ -8,14 +8,14 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
-import view.common.MenuBarView;
+import view.common.NavigationView;
 
 /**
  * The main view contains a button and a click listener.
  */
 @Route("")
 @PWA(name = "Vaadin Main Page", shortName = "Home")
-public class HomeView extends MenuBarView {
+public class HomeView extends NavigationView {
 
 	public HomeView() {
 		VerticalLayout vertical = new VerticalLayout();

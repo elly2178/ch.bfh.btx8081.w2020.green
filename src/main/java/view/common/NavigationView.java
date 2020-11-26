@@ -11,13 +11,13 @@ import view.HomeView;
 import view.LoginView;
 
 /**
- * Menu bar view offers the main menu for topic selection over all other views.
+ * Navigation view offers the menu bar for topic selection over all other views.
  */
-public abstract class MenuBarView extends VerticalLayout {
+public abstract class NavigationView extends VerticalLayout {
 
 	private static final long serialVersionUID = 6075640710178739027L;
 
-	public MenuBarView() {
+	public NavigationView() {
 		createMenuBar();
 	}
 

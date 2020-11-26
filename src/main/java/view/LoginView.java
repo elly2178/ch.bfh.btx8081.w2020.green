@@ -1,12 +1,13 @@
 package view;
 
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.login.AbstractLogin.LoginEvent;
 import com.vaadin.flow.component.login.LoginForm;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
+/**
+ * Login view to authenticate to application.
+ */
 @Route("login")
 public class LoginView extends VerticalLayout {
 	private static final String PATIENT_USERNAME = "patient";
@@ -22,8 +23,7 @@ public class LoginView extends VerticalLayout {
 				component.setError(true);
 			}
 		});
-		Button button = new Button("Click me", event -> Notification.show("Clicked!"));
-		add(component, button);
+		add(component);
 	}
 
 	private boolean authenticate(LoginEvent e) {
