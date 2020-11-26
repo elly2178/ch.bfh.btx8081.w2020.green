@@ -5,44 +5,61 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 
-public class PatientViewImplementation extends VerticalLayout implements IPatientView{
-
-	private TextField displayPID = new TextField();
-	
+@Route("patient")
+public class PatientViewImplementation extends VerticalLayout implements IPatientView {
+/** 
+ * PatientViewImpl rename
+ */
 	private List<IPatientViewListener> listeners = new ArrayList<IPatientViewListener>();
-	
+
 	public PatientViewImplementation() {
-		displayPID.setReadOnly(false);
-		add(displayPID);
-	
-	HorizontalLayout layout1 = new HorizontalLayout();
-	layout1.add(createButton("Show: 145"));
-	layout1.add(createButton("Reset"));
-	add(layout1);
+		TextArea textArea = new TextArea("Wilkommen bei der Patient aussicht.");
+		textArea.getStyle().set("minWidth", "250px");
+		textArea.setPlaceholder("Write someting here");
+		add(textArea);
+
+		HorizontalLayout layout1 = new HorizontalLayout();
+		layout1.getStyle().set("width", "250px");
+
+		layout1.add(createButton("YSCOB Test"));
+		add(layout1);
+
+		HorizontalLayout layout2 = new HorizontalLayout();
+		layout2.add(createButton("Tagesbuch"));
+		add(layout2);
+
+		HorizontalLayout layout3 = new HorizontalLayout();
+		layout3.add(createButton("Stimmung"));
+		add(layout3);
 	}
-	
+
 	private Button createButton(String opeation) {
-		return new Button(opeation, event -> {
-			for (IPatientViewListener listener: listeners)
-				listener.buttonClick(event.getSource().getText().charAt(0));
-		});
+		return new Button(opeation, event -> getUI().get().navigate("diary"));
 	}
-	
-	@Override
-	public void showPID(int pid) {
-		displayPID.setValue(Double.toString(pid));
-		
-	}
+
+	 void RouterLink() {
+		 Div buttonsDiv = new Div();
+		 buttonsDiv.add(new RouterLink("Diary", DiaryView.class));
+	 }
 
 	@Override
 	public void addListener(IPatientViewListener listener) {
 		listeners.add(listener);
+
+	}
+
+	@Override
+	public void showPID(int pid) {
+		// TODO Auto-generated method stub
 		
 	}
-	
 
 }

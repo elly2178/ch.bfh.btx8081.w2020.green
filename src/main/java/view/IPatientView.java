@@ -1,5 +1,8 @@
 package view;
 
+import com.vaadin.flow.router.Route;
+
+
 public interface IPatientView {
 	public void showPID(int pid);
 	
