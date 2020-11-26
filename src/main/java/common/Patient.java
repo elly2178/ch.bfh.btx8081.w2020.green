@@ -1,6 +1,9 @@
 package common;
-
+import common.Person;
+import java.util.ArrayList;
 import java.util.List;
+
+
 
 /**
  * Class represents a patient.
@@ -8,5 +11,5 @@ import java.util.List;
 public class Patient extends Person {
 	private int pid;
 	private String healthInsuranceName;
-//	private List<Diary> diaries = new ArrayList<>;
+	private List<String> diaries = new ArrayList();
 }
