@@ -47,7 +47,7 @@ public class PatientViewImplementation extends VerticalLayout implements IPatien
 
 	 void RouterLink() {
 		 Div buttonsDiv = new Div();
-		 buttonsDiv.add(new RouterLink("Diary", DiaryView.class));
+		 buttonsDiv.add(new RouterLink("Diary", DiariesView.class));
 	 }
 
 	@Override

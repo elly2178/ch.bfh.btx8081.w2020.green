@@ -12,16 +12,16 @@ import com.vaadin.flow.router.Route;
 import view.common.NavigationView;
 
 /**
- * Diary view for patients to add new diary entries.
+ * Diaries view for patients to add new diary entries.
  */
-@Route("diary")
-public class DiaryView extends NavigationView {
+@Route("diaries")
+public class DiariesView extends NavigationView {
 
-	public DiaryView() {
-		createDiaryTextArea();
+	public DiariesView() {
+		addCreateDiaryTextArea();
 	}
 
-	private void createDiaryTextArea() {
+	private void addCreateDiaryTextArea() {
 		TextArea textArea = new TextArea("Tagebuch");
 		textArea.getStyle().set("minHeight", "150px");
 		textArea.setPlaceholder("Bitte schildere deinen heutigen Tagesablauf");

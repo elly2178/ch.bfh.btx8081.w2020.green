@@ -1,6 +1,6 @@
 package core;
 
-import view.DiaryView;
+import view.DiariesView;
 import view.HomeView;
 import view.LoginView;
 
@@ -11,7 +11,7 @@ public enum View {
 
 	HOME(HomeView.class),
 	LOGIN(LoginView.class),
-	DIARY(DiaryView.class);
+	DIARY(DiariesView.class);
 
 	private Class<?> viewClass;
 
