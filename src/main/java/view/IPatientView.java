@@ -7,7 +7,7 @@ public interface IPatientView {
 	public void showPID(int pid);
 	
 	interface IPatientViewListener{
-		// cahnge char operaiton
+		// change char operaiton
 		void buttonClick(char opeation);
 	}
 	

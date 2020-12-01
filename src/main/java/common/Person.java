@@ -13,7 +13,16 @@ public abstract class Person {
 	private Address address;
 	private String email;
 
-	// private enum Gender { MALE, FEMALE}
+	public Person(String firstName, String secondName, Date birthDate, boolean gender, Address address, String email) {
+		super();
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.birthDate = birthDate;
+		this.gender= gender;
+		this.address = address;
+		this.email = email;
+	}
+	//private enum Gender { MALE, FEMALE}
 	public String getFirstName() {
 		return firstName;
 	}
