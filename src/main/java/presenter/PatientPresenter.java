@@ -1,10 +1,10 @@
-//package presenter;
+package presenter;
 
-//import model.PatientModel;
-//import view.IPatientView;
-//
-//public class PatientPresenter implements IPatientView.IPatientViewListener {
-//
+import model.PatientModel;
+import view.IPatientView;
+
+public class PatientPresenter implements IPatientView.IPatientViewListener {
+
 //	private PatientModel model;
 //	private IPatientView view;
 //	private int ipdValue = 0;
@@ -17,23 +17,13 @@
 //		view.showPID(ipdValue);
 //		view.addListener(this);
 //	}
-//	@Override
-//	public void buttonClick(char opeation) {
-//		this.ipdValue = ipdValue;
-//		view.showPID(ipdValue);
-//		
-//		switch (reset) {
-//		case "Reset":
-//			model.setPID(ipdValue);
-//			break;
-//
-//		default:
-//			break;
-//		}
-//		 
-//		 
-//		
+	@Override
+	public void buttonClick(char opeation) {
+		// add meth
+
+		}
+		
 //	}
 //	
 //
-//}
+}

@@ -12,7 +12,10 @@ import java.util.List;
  * Class represents a patient.
  */
 public class Patient extends Person {
-	public Patient(String firstName, String secondName, Date birthDate, boolean gender, common.Address address,
+	
+	
+
+	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
 			String email) {
 		super(firstName, secondName, birthDate, gender, address, email);
 		// TODO Auto-generated constructor stub
@@ -22,19 +25,21 @@ public class Patient extends Person {
 	private String healthInsuranceName;
 	private List<String> diaries = new ArrayList();
 	
-//	Person pat1 = new Person("Georgiana", "Dumitru", Date birthDate, False, Address address, "random@email.com") {
-//	};
 	
 	public boolean isAdult() {
 		LocalDate dateToday = java.time.LocalDate.now();
+		LocalDate birthDate = LocalDate.of(1989, 05, 18);
+		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
+		Patient pat1 = new Patient("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
+		
+		int yearDiff = dateToday.getYear() - birthDate.getYear();
+		
+		if (yearDiff >= 18) {
+			return true;
+		} else {
+			return false;
+		}
 		 
-		 
-		System.out.println("THE TIME NOW IS "+ dateToday);
-		return true;
-		//age = 
 	}
-	 // isAdult meth
-	// isAdult = today - get. brithdate 
-	// if isAdult >= 18 -> return true
-	// else return false
+	 
 	}
