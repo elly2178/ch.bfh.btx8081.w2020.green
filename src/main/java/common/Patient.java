@@ -27,6 +27,7 @@ public class Patient extends Person {
 	
 	
 	public boolean isAdult() {
+		// zeilen 30 bin36 kommt in model
 		LocalDate dateToday = java.time.LocalDate.now();
 		LocalDate birthDate = LocalDate.of(1989, 05, 18);
 		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");

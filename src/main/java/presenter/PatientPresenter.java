@@ -1,9 +1,9 @@
-package presenter;
-
-import model.PatientModel;
-import view.IPatientView;
-
-public class PatientPresenter implements IPatientView.IPatientViewListener {
+//package presenter;
+//
+//import model.PatientModel;
+//import view.IPatientView;
+//
+//public class PatientPresenter implements IPatientView.IPatientViewListener {
 
 //	private PatientModel model;
 //	private IPatientView view;
@@ -17,13 +17,13 @@ public class PatientPresenter implements IPatientView.IPatientViewListener {
 //		view.showPID(ipdValue);
 //		view.addListener(this);
 //	}
-	@Override
-	public void buttonClick(char opeation) {
-		// add meth
-
-		}
-		
-//	}
-//	
+//	@Override
+//	public void buttonClick(char opeation) {
+//		// add meth
 //
-}
+//		}
+//		
+////	}
+////	
+////
+//}
