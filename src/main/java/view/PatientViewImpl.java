@@ -21,7 +21,7 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 	public PatientViewImpl() {
 		TextField labelField = new TextField();
 		labelField.setLabel("Wilkommen bei der selbstevaluation test");
-		labelField.getStyle().set("minWidth", "250px");
+		//labelField.getStyle().set("minWidth", "250px");
 		add(labelField);
 
 		HorizontalLayout layout1 = new HorizontalLayout();

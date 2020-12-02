@@ -1,5 +1,7 @@
 package view;
 
+import java.time.LocalDate;
+
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -8,6 +10,8 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
+import common.Address;
+import model.PatientModel;
 import view.common.NavigationView;
 
 /**
@@ -25,5 +29,11 @@ public class HomeView extends NavigationView {
 		horizontal.add(new TextField("+ Add New Patient"));
 		Button button = new Button("Click me", event -> Notification.show("Clicked!"));
 		add(vertical, button);
+		
+		// added new lines ( 33 to 36 )
+		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
+		LocalDate birthDate = LocalDate.of(1989, 05, 18);
+		PatientModel model = new PatientModel("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
 	}
 }
+ 
