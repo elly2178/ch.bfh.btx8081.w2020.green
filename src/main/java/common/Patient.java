@@ -1,6 +1,7 @@
 package common;
 import common.Person;
- 
+import model.PatientModel;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,14 +28,11 @@ public class Patient extends Person {
 	
 	
 	public boolean isAdult() {
-		// zeilen 30 bin36 kommt in model
 		LocalDate dateToday = java.time.LocalDate.now();
 		LocalDate birthDate = LocalDate.of(1989, 05, 18);
-		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
-		Patient pat1 = new Patient("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
 		
 		int yearDiff = dateToday.getYear() - birthDate.getYear();
-		
+				
 		if (yearDiff >= 18) {
 			return true;
 		} else {
