@@ -1,10 +1,17 @@
 package common;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Staff extends Person{
 
-    private int staffId;
+    public Staff(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
+			String email) {
+		super(firstName, secondName, birthDate, gender, address, email);
+		// TODO Auto-generated constructor stub
+	}
+
+	private int staffId;
     private String department;
     private String certification;
     private Date joinedDate;

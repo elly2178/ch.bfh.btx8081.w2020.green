@@ -40,7 +40,7 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 	}
 
 	private Button createaButtonMoodButton(String oString) {
-		return new Button(oString, event -> getUI().get().navigate("your path here"));
+		return new Button(oString, event -> getUI().get().navigate("patient/moodtest"));
 	}
 	private Button createButtonTestButton(String oString) {
 		return new Button(oString, event -> getUI().get().navigate("patient/ybocstest"));
