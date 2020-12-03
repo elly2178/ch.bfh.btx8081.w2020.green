@@ -1,5 +1,6 @@
 package common;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -8,12 +9,21 @@ import java.util.Date;
 public abstract class Person {
 	private String firstName;
 	private String secondName;
-	private Date birthDate;
+	private LocalDate birthDate;
 	private boolean gender;
 	private Address address;
 	private String email;
 
-	// private enum Gender { MALE, FEMALE}
+	public Person(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email) {
+		super();
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.birthDate = birthDate;
+		this.gender= gender;
+		this.address = address;
+		this.email = email;
+	}
+	//private enum Gender { MALE, FEMALE}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -30,11 +40,11 @@ public abstract class Person {
 		this.secondName = secondName;
 	}
 
-	public Date getBirthDate() {
+	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
