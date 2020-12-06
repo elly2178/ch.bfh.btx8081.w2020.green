@@ -31,6 +31,7 @@ public abstract class NavigationView extends VerticalLayout {
 		MenuItem patients = menuBar.addItem("Patients");
 		SubMenu patientsSubMenu = patients.getSubMenu();
 		menuBar.addItem("Login", e -> navigateTo("login"));
+		menuBar.addItem("Patient Overview", e -> navigateTo("patientOverview"));
 		patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
 		patientsSubMenu.addItem("Add", e -> navigateTo("add"));
 		add(menuBar);
