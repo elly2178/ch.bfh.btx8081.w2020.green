@@ -13,8 +13,9 @@ public abstract class Person {
 	private boolean gender;
 	private Address address;
 	private String email;
+	private String phone;
 
-	public Person(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email) {
+	public Person(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -22,6 +23,7 @@ public abstract class Person {
 		this.gender= gender;
 		this.address = address;
 		this.email = email;
+		this.phone = phone;
 	}
 	//private enum Gender { MALE, FEMALE}
 	public String getFirstName() {
@@ -71,4 +73,14 @@ public abstract class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	
 }

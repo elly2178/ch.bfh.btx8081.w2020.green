@@ -41,7 +41,7 @@ public class MainView extends VerticalLayout {
 		// added new lines ( 33 to 36 )
 		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
 		LocalDate birthDate = LocalDate.of(1989, 05, 18);
-		PatientModel model = new PatientModel("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
+		PatientModel model = new PatientModel("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com", "032 995 34 56");
 	}
 
 	public void createNavigation() {

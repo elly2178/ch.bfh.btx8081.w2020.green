@@ -6,8 +6,8 @@ import java.util.Date;
 public class Staff extends Person{
 
     public Staff(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
-			String email) {
-		super(firstName, secondName, birthDate, gender, address, email);
+			String email, String phone) {
+		super(firstName, secondName, birthDate, gender, address, email, phone);
 		// TODO Auto-generated constructor stub
 	}
 
