@@ -1,39 +1,70 @@
 package view;
 
-import java.time.LocalDate;
-
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.contextmenu.MenuItem;
+import com.vaadin.flow.component.contextmenu.SubMenu;
+import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
 
-import common.Address;
-import model.PatientModel;
-import view.common.NavigationView;
+import core.Role;
+import model.UserSessionModel;
 
 /**
- * The main view contains a button and a click listener.
+ * Home page after successful login.
  */
-@Route("")
-@PWA(name = "Vaadin Main Page", shortName = "Home")
-public class HomeView extends NavigationView {
+@Route("home")
+public class HomeView extends VerticalLayout {
+	private static final long serialVersionUID = -2515746681908568218L;
+	private transient UserSessionModel userSessionModel;
 
-	public HomeView() {
-		VerticalLayout vertical = new VerticalLayout();
-		HorizontalLayout horizontal = new HorizontalLayout();
-		vertical.add(horizontal);
-		horizontal.add(new TextField("Patient Search"));
-		horizontal.add(new TextField("+ Add New Patient"));
-		Button button = new Button("Click me", event -> Notification.show("Clicked!"));
-		add(vertical, button);
-		
-		// added new lines ( 33 to 36 )
-		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
-		LocalDate birthDate = LocalDate.of(1989, 05, 18);
-		PatientModel model = new PatientModel("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
+	public HomeView(UserSessionModel userSessionModel) {
+		this.userSessionModel = userSessionModel;
+		addMenuBar();
+	}
+
+	private void addMenuBar() {
+		MenuBar menuBar = new MenuBar();
+		menuBar.setOpenOnHover(true);
+
+		switch (userSessionModel.getRole()) {
+		case ANONYMOUS:
+			addAnonymousNavigation(menuBar);
+			break;
+		case PATIENT:
+			addPatientNavigation(menuBar);
+			break;
+		case DOCTOR:
+			addDoctorNavigation(menuBar);
+			break;
+		default:
+			throw new IllegalStateException("role is undefined");
+		}
+
+		menuBar.addItem("Logout", e -> {
+			userSessionModel.setRole(Role.ANONYMOUS);
+			userSessionModel.getSession().close();
+			navigateTo("");
+		});
+		add(menuBar);
+	}
+
+	private void addDoctorNavigation(MenuBar menuBar) {
+		MenuItem patients = menuBar.addItem("Patients");
+		SubMenu patientsSubMenu = patients.getSubMenu();
+		patientsSubMenu.addItem("Add", e -> navigateTo("add"));
+	}
+
+	private void addPatientNavigation(MenuBar menuBar) {
+		MenuItem patients = menuBar.addItem("Patients");
+		SubMenu patientsSubMenu = patients.getSubMenu();
+		patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
+	}
+
+	private void addAnonymousNavigation(MenuBar menuBar) {
+		menuBar.addItem("Login", e -> navigateTo("login"));
+	}
+
+	private void navigateTo(String route) {
+		getUI().ifPresent(ui -> ui.navigate(route));
 	}
 }
- 

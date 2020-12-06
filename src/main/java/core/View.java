@@ -1,16 +1,17 @@
 package core;
 
 import view.DiariesView;
-import view.HomeView;
-import view.LoginView;
+import view.LoginViewImpl;
+import view.MainView;
 
 /**
  * Available views within Leaf Doctors application.
  */
+// TODO - probably not needed.
 public enum View {
 
-	HOME(HomeView.class),
-	LOGIN(LoginView.class),
+	HOME(MainView.class),
+	LOGIN(LoginViewImpl.class),
 	DIARY(DiariesView.class);
 
 	private Class<?> viewClass;

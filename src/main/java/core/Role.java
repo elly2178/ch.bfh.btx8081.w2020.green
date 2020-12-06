@@ -13,7 +13,7 @@ public enum Role {
 	/**
 	 * User is not logged in.
 	 */
-	ANONYMOUS(LOGIN),
+	ANONYMOUS(LOGIN, HOME),
 
 	/**
 	 * User is logged in as patient.

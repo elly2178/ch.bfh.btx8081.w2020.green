@@ -10,7 +10,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
  * Navigation view offers the menu bar for topic selection over all other views.
  */
 public abstract class NavigationView extends VerticalLayout {
-
 	private static final long serialVersionUID = 6075640710178739027L;
 
 	public NavigationView() {
@@ -36,15 +35,6 @@ public abstract class NavigationView extends VerticalLayout {
 		patientsSubMenu.addItem("Add", e -> navigateTo("newPatient"));
 		add(menuBar);
 	}
-
-	// Might not be used. Work with MenuBar instead.
-	// void routerLink() {
-	// Div menu = new Div();
-	// menu.add(new RouterLink("Home", HomeView.class));
-	// menu.add(new RouterLink("Login", LoginView.class));
-	// add(menu);
-	// // menu.add(new RouterLink("Greeting", GreetingComponent.class, "default"));
-	// }
 
 	private void navigateTo(String route) {
 		getUI().ifPresent(ui -> ui.navigate(route));
