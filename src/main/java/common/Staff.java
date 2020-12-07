@@ -1,20 +1,19 @@
 package common;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Staff extends Person{
 
-    public Staff(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
-			String email) {
-		super(firstName, secondName, birthDate, gender, address, email);
-		// TODO Auto-generated constructor stub
-	}
-
-	private int staffId;
+    private int staffId;
     private String department;
     private String certification;
-    private Date joinedDate;
+    private LocalDate joinedDate;
+
+    public Staff(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
+			String email, String phone) {
+		super(firstName, secondName, birthDate, gender, address, email, phone);
+		// TODO Auto-generated constructor stub
+	}
 
     public int getStaffId() {
         return staffId;
@@ -40,11 +39,11 @@ public class Staff extends Person{
         this.certification = certification;
     }
 
-    public Date getJoinedDate() {
+    public LocalDate getJoinedDate() {
         return joinedDate;
     }
 
-    public void setJoinedDate(Date joinedDate) {
+    public void setJoinedDate(LocalDate joinedDate) {
         this.joinedDate = joinedDate;
     }
 }
