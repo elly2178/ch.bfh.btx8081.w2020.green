@@ -1,16 +1,16 @@
 package presenter;
 
-import model.PatientModel;
+import model.Patient;
 import view.IPatientView;
 
 public class PatientPresenter implements IPatientView.IPatientViewListener {
 
-	private PatientModel model;
+	private Patient model;
 	private IPatientView view;
 	private int ipdValue = 0;
 	private String reset = "Reset";
 	
-	public PatientPresenter(PatientModel model, IPatientView view) {
+	public PatientPresenter(Patient model, IPatientView view) {
 		this.model = model;
 		this.view = view;
 		

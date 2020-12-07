@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import common.Address; 
 import common.Person;
 
-public class PatientModel extends Person{
+public class Patient extends Person{
 		
 	private int pid;
 	private String healthInsuranceName;
@@ -17,9 +17,9 @@ public class PatientModel extends Person{
 	LocalDate birthDate = LocalDate.of(1989, 05, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
 	
-	public PatientModel(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
-			String email, String phone) {
-		super(firstName, secondName, birthDate, gender, address, email, phone);
+	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
+			String email, String phonenumber) {
+		super(firstName, secondName, birthDate, gender, address, email, phonenumber);
 		// TODO Auto-generated constructor stub
 	}
 	//calculateAVr score

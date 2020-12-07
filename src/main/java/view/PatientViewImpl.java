@@ -4,6 +4,7 @@ import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -19,10 +20,10 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 	private List<IPatientViewListener> listeners = new ArrayList<IPatientViewListener>();
 
 	public PatientViewImpl() {
-		TextField labelField = new TextField();
-		labelField.setLabel("Wilkommen bei der selbstevaluation test");
+		Text subtitle = new Text("Wilkommen bei der selbstevaluation test");
+		 
 		//labelField.getStyle().set("minWidth", "250px");
-		add(labelField);
+		add(subtitle);
 
 		HorizontalLayout layout1 = new HorizontalLayout();
 		layout1.getStyle().set("width", "250px");
