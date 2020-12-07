@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 	private List<IPatientViewListener> listeners = new ArrayList<IPatientViewListener>();
 
 	public PatientViewImpl() {
-		Text subtitle = new Text("Wilkommen bei der selbstevaluation test");
+		Text subtitle = new Text("Wilkommen beim Selbstevaluationstest");
 		 
 		//labelField.getStyle().set("minWidth", "250px");
 		add(subtitle);
@@ -32,7 +31,7 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 		add(layout1);
 
 		HorizontalLayout layout2 = new HorizontalLayout();
-		layout2.add(createButton("Tagesbuch"));
+		layout2.add(createButton("Tagebuch"));
 		add(layout2);
 
 		HorizontalLayout layout3 = new HorizontalLayout();

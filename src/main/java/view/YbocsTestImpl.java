@@ -14,11 +14,16 @@ import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+
+import model.YbocsModel;
+import presenter.YbocsPresenter;
 /**
  * vaadin
  * @author ADEK
  *
  */
+
+
 @Route("patient/ybocstest")
 public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 	
@@ -29,9 +34,13 @@ public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 		return ybocsButtonGroups;
 	}
 	
+	
 	private TextField displayField = new TextField();
 	
 	public YbocsTestImpl() {
+		YbocsModel ybocsModel = new YbocsModel();
+		new YbocsPresenter(ybocsModel, this);
+		
 		Text titleText = new Text("Yale Brown OCD Scale");
 		Text descriptionText = new Text("Please answer the following questions.");
 		add(titleText, descriptionText);			
@@ -92,10 +101,8 @@ public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 	
 	private Button createButton(String label) {
 		return new Button(label, event -> {
-			Notification.show("buttonClick fired");
 			for (IYbocsTestViewListener listener : listeners) {
 				listener.buttonClick(ybocsButtonGroups);	
-				
 			}
 		});
 	}

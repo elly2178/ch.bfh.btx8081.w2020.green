@@ -12,6 +12,8 @@ import model.Patient;
 import model.UserSessionModel;
 import presenter.LoginPresenter;
 
+
+
 /**
  * The main view contains a button and a click listener.
  */
@@ -37,11 +39,8 @@ public class MainView extends VerticalLayout {
 		// Button button = new Button("Click me", event ->
 		// Notification.show("Clicked!"));
 		// add(vertical, button);
-
-		// added new lines ( 33 to 36 )
-		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
-		LocalDate birthDate = LocalDate.of(1989, 05, 18);
-		Patient model = new Patient("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com", "0800810410");
+	 
+	 
 	}
 
 	public void createNavigation() {

@@ -40,17 +40,19 @@ public class YbocsPresenter implements IYbocsTestView.IYbocsTestViewListener {
 	}
 	
 	public void buttonClick(ArrayList<RadioButtonGroup<Integer>> buttongroups) {
-		//YbocsTestImpl ybocsTest = new YbocsTestImpl();
-		//ArrayList<RadioButtonGroup<Integer>>ybocsButtonGroups = ybocsTest.getPressedRadioButton();
-		System.out.println("BUTTON WAS PRESSED MEOW");
+		model.setYbocsScore(0);
+		boolean choice_unset = false;
 		for (RadioButtonGroup<Integer> buttonGroup : buttongroups) {
-			model.setYbocsScore(0);
-			if (! buttonGroup.getValue().equals(null)) {
-				view.showNotification("Please make sure to make a choice in every Question.");
-			} else {
+			if (buttonGroup.isEmpty()) {
+				choice_unset = true;
+			} else {		
 				model.addition(buttonGroup.getValue());
 			}
 		}
-		view.setDisplay(model.getYbocsScoreAsString());		
+		if (choice_unset == true) {
+			view.showNotification("Please make sure to make a choice in every Question.");
+		} else {
+			view.setDisplay(model.getYbocsScoreAsString());		
+		}
 	}
 }
