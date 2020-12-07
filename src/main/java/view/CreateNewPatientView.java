@@ -7,6 +7,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.charts.model.Label;
 import com.vaadin.flow.component.charts.model.Select;
 import com.vaadin.flow.component.checkbox.Checkbox;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.formlayout.FormLayout.FormItem;
@@ -57,6 +58,12 @@ public class CreateNewPatientView extends VerticalLayout {
 	   gender.setItems("female", "male", "other");
 	   gender.setPlaceholder("Gender");
 	   */
+	   ComboBox<String> gender = new ComboBox<>();
+       gender.setAllowCustomValue(true);
+       gender.setLabel("Gender");
+       gender.setItems("female", "male", "other");
+       //setColspan(country, 2);
+	   
 	   
 	   TextField phone = new TextField();
 	   phone.setLabel("Phone");
@@ -85,10 +92,10 @@ public class CreateNewPatientView extends VerticalLayout {
 	   country.setLabel("Country");
 	   //country.setPlaceholder("e. g. Switzerland");
 	   
-	   columnLayout.add(firstName, secondName,  birthDate, phone, email, streetAndNr, postalCode, city, country); 
+	   columnLayout.add(firstName, secondName,  birthDate, gender, phone, email, streetAndNr, postalCode, city, country); 
 	   
 	   // 
-	   columnLayout.setColspan(email, 2);
+	   //columnLayout.setColspan(email, 2);
 	   columnLayout.setColspan(streetAndNr, 2);
 	   columnLayout.setColspan(country, 2);
 	   
