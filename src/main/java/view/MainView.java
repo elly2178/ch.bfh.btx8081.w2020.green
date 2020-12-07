@@ -8,7 +8,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
 import common.Address;
-import model.PatientModel;
+import model.Patient;
 import model.UserSessionModel;
 import presenter.LoginPresenter;
 
@@ -41,7 +41,7 @@ public class MainView extends VerticalLayout {
 		// added new lines ( 33 to 36 )
 		Address patAddress = new Address(2502, "Freistrasse", "Biel", "Schweiz");
 		LocalDate birthDate = LocalDate.of(1989, 05, 18);
-		PatientModel model = new PatientModel("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
+		Patient model = new Patient("Georgiana", "Dumitru", birthDate, false, patAddress, "random@email.com");
 	}
 
 	public void createNavigation() {

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import common.Address; 
 import common.Person;
 
-public class PatientModel extends Person{
+public class Patient extends Person{
 		
 	private int pid;
 	private String healthInsuranceName;
@@ -17,7 +17,7 @@ public class PatientModel extends Person{
 	LocalDate birthDate = LocalDate.of(1989, 05, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
 	
-	public PatientModel(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
+	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
 			String email) {
 		super(firstName, secondName, birthDate, gender, address, email);
 		// TODO Auto-generated constructor stub

@@ -1,15 +1,16 @@
 package view;
 
 import com.vaadin.flow.component.Text;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.router.Route;
 
 @Route("patient/moodtest")
-public class MoodTestImpl extends VerticalLayout implements IYbocsTestView{
+public class MoodTestImpl extends VerticalLayout implements IMoodTestView{
 	
-	public MoodTestImpl(){
-		
+	public MoodTestImpl(){		
 		Text titleText = new Text("Mood Test ");
 		Text legendText = new Text("Where 0 = very false, 1 = false, 2 = neutral, 3 = true, 4 = very true");
 		add(titleText, legendText);
@@ -70,6 +71,14 @@ public class MoodTestImpl extends VerticalLayout implements IYbocsTestView{
 				moodButtonGroup7, moodButtonGroup9, moodButtonGroup9, 
 				moodButtonGroup10, moodButtonGroup11, moodButtonGroup12, moodButtonGroup13);
 		
+		Button button = new Button("Calculate Test");
+		button.addClickListener(e -> { 
+			 int add = moodButtonGroup1.getValue()+ moodButtonGroup2.getValue() + moodButtonGroup3.getValue() + moodButtonGroup4.getValue() + moodButtonGroup5.getValue()
+					  + moodButtonGroup6.getValue() + moodButtonGroup7.getValue() +moodButtonGroup8.getValue() + moodButtonGroup9.getValue() 
+					  + moodButtonGroup10.getValue() + moodButtonGroup11.getValue() + moodButtonGroup12.getValue() + moodButtonGroup13.getValue();
+			Notification.show("pressed " + add);
+		});
+		add(button);	
 	}
 
 }
