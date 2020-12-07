@@ -18,8 +18,8 @@ public class Patient extends Person{
 	LocalDate dateToday = java.time.LocalDate.now();
 	
 	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
-			String email) {
-		super(firstName, secondName, birthDate, gender, address, email);
+			String email, String phonenumber) {
+		super(firstName, secondName, birthDate, gender, address, email, phonenumber);
 		// TODO Auto-generated constructor stub
 	}
 	//calculateAVr score
