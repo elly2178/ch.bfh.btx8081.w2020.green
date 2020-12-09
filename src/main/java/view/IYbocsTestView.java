@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 
+import view.common.NavigationView;
+
 /**
  * view
  * @author ADEK

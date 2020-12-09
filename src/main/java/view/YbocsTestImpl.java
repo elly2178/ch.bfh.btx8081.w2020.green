@@ -17,6 +17,7 @@ import com.vaadin.flow.router.Route;
 
 import model.YbocsModel;
 import presenter.YbocsPresenter;
+import view.common.NavigationView;
 /**
  * vaadin
  * @author ADEK
@@ -25,16 +26,11 @@ import presenter.YbocsPresenter;
 
 
 @Route("patient/ybocstest")
-public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
+public class YbocsTestImpl extends NavigationView implements IYbocsTestView {
 	
 	private ArrayList<IYbocsTestViewListener> listeners = new ArrayList<IYbocsTestViewListener>();
-	
 	private ArrayList<RadioButtonGroup<Integer>> ybocsButtonGroups =  new ArrayList<RadioButtonGroup<Integer>>();
-	public ArrayList<RadioButtonGroup<Integer>> getPressedRadioButton(){
-		return ybocsButtonGroups;
-	}
-	
-	
+	 	
 	private TextField displayField = new TextField();
 	
 	public YbocsTestImpl() {

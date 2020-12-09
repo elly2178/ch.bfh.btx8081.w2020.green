@@ -30,13 +30,14 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 		layout1.add(createButtonTestButton("YBOCS Test"));
 		add(layout1);
 
-		HorizontalLayout layout2 = new HorizontalLayout();
-		layout2.add(createButton("Tagebuch"));
-		add(layout2);
-
 		HorizontalLayout layout3 = new HorizontalLayout();
-		layout3.add(createaButtonMoodButton("Stimmung"));
+		layout3.add(createaButtonMoodButton("Mood"));
 		add(layout3);
+		
+		HorizontalLayout layout2 = new HorizontalLayout();
+		layout2.add(createButton("Diary"));
+		add(layout2);
+		
 	}
 
 	private Button createaButtonMoodButton(String oString) {

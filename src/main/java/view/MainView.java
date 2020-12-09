@@ -10,7 +10,9 @@ import com.vaadin.flow.server.PWA;
 import common.Address;
 import model.Patient;
 import model.UserSessionModel;
+import model.YbocsModel;
 import presenter.LoginPresenter;
+import presenter.YbocsPresenter;
 
 
 
@@ -26,7 +28,8 @@ public class MainView extends VerticalLayout {
 
 	public MainView() {
 		addHeaderImage();
-
+		
+		
 		new LoginPresenter(userSessionModel, loginView, this);
 		add(loginView);
 		// addMenuBar();
