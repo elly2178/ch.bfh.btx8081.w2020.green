@@ -12,7 +12,7 @@ import model.UserSessionModel;
 /**
  * Home page after successful login.
  */
-@Route("home")
+@Route(value = "home")
 public class HomeView extends VerticalLayout {
 	private static final long serialVersionUID = -2515746681908568218L;
 	private transient UserSessionModel userSessionModel;
@@ -58,6 +58,7 @@ public class HomeView extends VerticalLayout {
 		MenuItem patients = menuBar.addItem("Patients");
 		SubMenu patientsSubMenu = patients.getSubMenu();
 		patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
+		patientsSubMenu.addItem("Ybocs-Test", e -> navigateTo("patient/ybocstest"));
 	}
 
 	private void addAnonymousNavigation(MenuBar menuBar) {
