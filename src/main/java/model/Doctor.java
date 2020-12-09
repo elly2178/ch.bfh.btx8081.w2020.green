@@ -1,5 +1,7 @@
-package common;
+package model;
 
+import common.Address;
+import common.Person;
 import model.Patient;
 
 import java.time.LocalDate;
