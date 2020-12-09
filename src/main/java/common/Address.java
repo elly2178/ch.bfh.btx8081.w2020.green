@@ -1,10 +1,16 @@
 package common;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Class representing an address.
  */
+
+@Entity
 public class Address {
 
+	@Id
 	private int postalCode;
 	private String street;
 	private String city;

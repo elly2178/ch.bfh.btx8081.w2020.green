@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseSettingsState">
+    <option name="database" value="jimen1" />
+    <option name="databaseDriver" value="PostgreSQL-42.2.5" />
+    <option name="databaseDriverToJarPath">
+      <map>
+        <entry key="PostgreSQL-42.2.5" value="$USER_HOME$/.Jpa Support/driver_vendor/PostgreSQL-42.2.5.jar" />
+      </map>
+    </option>
+    <option name="host" value="147.87.116.213" />
+    <option name="port" value="5432" />
+    <option name="url" value="jdbc:postgresql://147.87.116.213:5432/jimen1" />
+    <option name="username" value="Studierende" />
+  </component>
+</project>

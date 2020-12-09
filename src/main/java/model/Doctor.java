@@ -4,25 +4,36 @@ import common.Address;
 import common.Person;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-
+import javax.persistence.*;
 /**
  * Class representing a doctor.
  */
+
+@Entity
 public class Doctor extends Person {
 
 
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     private String title;
     private String location;
-    private List<Patient> patients = new ArrayList<>();
+
+    //@OneToMany
+    //private final List<Patient> patients;
 
 
     public Doctor(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
         super(firstName, secondName, birthDate, gender, address, email, phone);
     }
+
+    public Doctor() {
+        super();
+    }
+
 
     public String getTitle() {
         return title;
@@ -40,11 +51,4 @@ public class Doctor extends Person {
         this.location = location;
     }
 
-    public List<Patient> getPatients() {
-        return patients;
-    }
-
-    public void setPatients(List<Patient> patients) {
-        this.patients = patients;
-    }
 }

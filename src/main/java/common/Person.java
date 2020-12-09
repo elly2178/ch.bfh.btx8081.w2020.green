@@ -1,19 +1,28 @@
 package common;
 
+import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
+
 
 /**
  * Basic abstract class representing any kind of person.
  */
+
+@Entity
 public abstract class Person {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
 	private String firstName;
 	private String secondName;
 	private LocalDate birthDate;
 	private boolean gender;
-	private Address address;
 	private String email;
 	private String phone;
+
+	private Address address;
+
 
 	public Person(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
 		super();
@@ -25,7 +34,12 @@ public abstract class Person {
 		this.email = email;
 		this.phone = phone;
 	}
-	//private enum Gender { MALE, FEMALE}
+
+    public Person() {
+
+    }
+
+    //private enum Gender { MALE, FEMALE}
 	public String getFirstName() {
 		return firstName;
 	}
