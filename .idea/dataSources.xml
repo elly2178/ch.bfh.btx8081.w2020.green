@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="DomainModelLeafHospital" uuid="5eedec1e-165f-41e4-8f6c-9169c2b09fb8">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="LeadDoctors" uuid="75e29c0b-be0e-4206-8f65-bf9c018a963e">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/doc/task02/DomainModelLeafHospital.vpp</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="DomainModelLeafHospital [2]" uuid="922631cb-7df7-4e9a-9753-b53418f9402b">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task02\domain_models\DomainModelLeafHospital.vpp</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="DomainModelLeafHospital.vpp" uuid="c5bd8fa0-2aff-4b8c-8f69-eac890ecd025">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task02\domain_models\DomainModelLeafHospital.vpp.bak_001d</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://147.87.116.213:5432/jimen1</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>
