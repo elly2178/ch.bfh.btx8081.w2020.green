@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added some basic code">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Doctor.java" afterDir="false" />
-    </list>
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added basic code Doctor" />
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,21 +73,6 @@
     <option name="myCommands">
       <command value="mvn jetty:run" />
     </option>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -157,7 +136,7 @@
       <workItem from="1606993260977" duration="259000" />
       <workItem from="1606993631021" duration="359000" />
       <workItem from="1607454864839" duration="201000" />
-      <workItem from="1607478488108" duration="2257000" />
+      <workItem from="1607478488108" duration="2494000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -250,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606739894086</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added basic code Doctor">
+      <created>1607481441740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607481441740</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +266,7 @@
     <MESSAGE value="Class Diagram&#10;Deployment Diagram&#10;Component Diagram" />
     <MESSAGE value="Added some basic code" />
     <MESSAGE value="Working on more code, pushing when complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on more code, pushing when complete." />
+    <MESSAGE value="Added basic code Doctor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic code Doctor" />
   </component>
 </project>
