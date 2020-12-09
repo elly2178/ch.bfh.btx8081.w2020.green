@@ -2,17 +2,17 @@ package model;
 
 import common.Address;
 import common.Person;
-import model.Patient;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Class representing a doctor.
  */
-
 public class Doctor extends Person {
+
 
     private int id;
     private String title;
