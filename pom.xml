@@ -16,6 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 
+		<jpa.version>2.2</jpa.version>
 		<vaadin.version>14.4.2</vaadin.version>
 
 		<drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
@@ -104,6 +105,11 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>${jpa.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.vaadin</groupId>
