@@ -6,22 +6,15 @@ import com.vaadin.flow.server.VaadinSession;
 import core.Role;
 
 /**
- * Model class representing the active user session.
+ * Model class handles login action and sets the user role.
  */
-public class UserSessionModel {
+public class LoginModel {
 	private static final String PATIENT_USERNAME = "patient";
 	private static final String PATIENT_PASSWORD = "123";
 	private static final String DOCTOR_USERNAME = "doctor";
 	private static final String DOCTOR_PASSWORD = "123";
 
-	private VaadinSession session;
-	private Role role;
-
-	public UserSessionModel() {
-		session = VaadinSession.getCurrent();
-		if (session == null) {
-			throw new IllegalStateException("Current VaadinSession not available");
-		}
+	public LoginModel() {
 		setRole(Role.ANONYMOUS);
 	}
 
@@ -39,25 +32,10 @@ public class UserSessionModel {
 	}
 
 	/**
-	 * @return the VaadinSession
-	 */
-	public VaadinSession getSession() {
-		return session;
-	}
-
-	/**
 	 * @param role
 	 *            the user role
 	 */
 	public void setRole(Role role) {
-		session.setAttribute("role", role);
-		this.role = role;
-	}
-
-	/**
-	 * @return the user role
-	 */
-	public Role getRole() {
-		return role;
+		VaadinSession.getCurrent().setAttribute("role", role);
 	}
 }

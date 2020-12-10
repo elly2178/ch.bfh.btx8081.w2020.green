@@ -8,14 +8,13 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.router.Route;
-
-import view.common.NavigationView;
+import com.vaadin.flow.router.RouterLayout;
 
 /**
  * Diaries view for patients to add new diary entries.
  */
-@Route("diaries")
-public class DiariesView extends NavigationView {
+@Route(value = "diaries", layout = HomeView.class)
+public class DiariesView extends VerticalLayout {
 
 	public DiariesView() {
 		addCreateDiaryTextArea();

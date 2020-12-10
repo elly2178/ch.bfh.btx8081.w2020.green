@@ -5,28 +5,31 @@ import com.vaadin.flow.component.contextmenu.SubMenu;
 import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLayout;
+import com.vaadin.flow.server.VaadinSession;
 
 import core.Role;
-import model.UserSessionModel;
 
 /**
  * Home page after successful login.
  */
 @Route(value = "home")
-public class HomeView extends VerticalLayout {
+public class HomeView extends VerticalLayout implements RouterLayout {
 	private static final long serialVersionUID = -2515746681908568218L;
-	private transient UserSessionModel userSessionModel;
 
-	public HomeView(UserSessionModel userSessionModel) {
-		this.userSessionModel = userSessionModel;
-		addMenuBar();
+	public HomeView() {
+		Role role = (Role) VaadinSession.getCurrent().getAttribute("role");
+		if (role == null) {
+			navigateTo("login");
+			return;
+		}
+		addMenuBar(role);
 	}
 
-	private void addMenuBar() {
+	private void addMenuBar(Role role) {
 		MenuBar menuBar = new MenuBar();
 		menuBar.setOpenOnHover(true);
-
-		switch (userSessionModel.getRole()) {
+		switch (role) {
 		case ANONYMOUS:
 			addAnonymousNavigation(menuBar);
 			break;
@@ -39,11 +42,10 @@ public class HomeView extends VerticalLayout {
 		default:
 			throw new IllegalStateException("role is undefined");
 		}
-
 		menuBar.addItem("Logout", e -> {
-			userSessionModel.setRole(Role.ANONYMOUS);
-			userSessionModel.getSession().close();
-			navigateTo("");
+			VaadinSession.getCurrent().setAttribute("role", Role.ANONYMOUS);
+			VaadinSession.getCurrent().close();
+			navigateTo("login");
 		});
 		add(menuBar);
 	}

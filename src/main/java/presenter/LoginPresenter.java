@@ -2,7 +2,7 @@ package presenter;
 
 import com.vaadin.flow.component.login.AbstractLogin.LoginEvent;
 
-import model.UserSessionModel;
+import model.LoginModel;
 import view.LoginView;
 import view.MainView;
 
@@ -11,12 +11,12 @@ import view.MainView;
  */
 public class LoginPresenter implements LoginView.LoginViewListener {
 	private static final long serialVersionUID = -326401691991648229L;
-	private transient UserSessionModel userSessionModel;
+	private transient LoginModel loginModel;
 	private transient LoginView loginView;
 	private MainView mainView;
 
-	public LoginPresenter(UserSessionModel model, LoginView loginView, MainView mainView) {
-		userSessionModel = model;
+	public LoginPresenter(LoginModel model, LoginView loginView, MainView mainView) {
+		this.loginModel = model;
 		this.loginView = loginView;
 		this.loginView.addListener(this);
 		this.mainView = mainView;
@@ -24,7 +24,7 @@ public class LoginPresenter implements LoginView.LoginViewListener {
 
 	@Override
 	public void onComponentEvent(LoginEvent event) {
-		boolean isAuthenticated = userSessionModel.authenticate(event);
+		boolean isAuthenticated = loginModel.authenticate(event);
 		if (isAuthenticated) {
 			mainView.createNavigation();
 		} else {

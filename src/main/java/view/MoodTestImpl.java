@@ -12,11 +12,9 @@ import com.vaadin.flow.router.Route;
 
 import model.MoodModel;
 import presenter.MoodPresenter;
-import view.IYbocsTestView.IYbocsTestViewListener;
-import view.common.NavigationView;
 
 @Route("patient/moodtest")
-public class MoodTestImpl extends NavigationView implements IMoodTestView{
+public class MoodTestImpl extends VerticalLayout implements IMoodTestView{
 	private ArrayList<IMoodTestViewListener> listeners = new ArrayList<IMoodTestViewListener>();
 	private ArrayList<RadioButtonGroup<Integer>> moodButtonGroups =  new ArrayList<RadioButtonGroup<Integer>>();
 	

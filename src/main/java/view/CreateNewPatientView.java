@@ -1,38 +1,17 @@
 package view;
 
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.charts.model.Label;
-import com.vaadin.flow.component.charts.model.Select;
-import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.formlayout.FormLayout;
-import com.vaadin.flow.component.formlayout.FormLayout.FormItem;
-import com.vaadin.flow.component.html.NativeButton;
-import com.vaadin.flow.component.listbox.ListBox;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
-import com.vaadin.flow.component.radiobutton.RadioGroupVariant;
 import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.binder.Binder;
-import com.vaadin.flow.data.binder.Binder.Binding;
-import com.vaadin.flow.data.binder.BinderValidationStatus;
-import com.vaadin.flow.data.binder.BindingValidationStatus;
-import com.vaadin.flow.data.validator.EmailValidator;
-import com.vaadin.flow.data.validator.StringLengthValidator;
-import com.vaadin.flow.data.value.ValueChangeMode;
-import com.vaadin.flow.function.SerializablePredicate;
 import com.vaadin.flow.router.Route;
 
-import common.Person;
-
-@Route("newPatient")
+@Route(value = "newPatient", layout = HomeView.class)
 public class CreateNewPatientView extends VerticalLayout {
 	
 	public CreateNewPatientView() {
