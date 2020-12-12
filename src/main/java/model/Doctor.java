@@ -12,6 +12,7 @@ import javax.persistence.*;
  */
 
 @Entity
+@Table(name = "Doctors")
 public class Doctor extends Person {
 
 
@@ -22,8 +23,8 @@ public class Doctor extends Person {
     private String title;
     private String location;
 
-    //@OneToMany
-    //private final List<Patient> patients;
+    @OneToMany
+    private List<Patient> patients;
 
 
     public Doctor(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
