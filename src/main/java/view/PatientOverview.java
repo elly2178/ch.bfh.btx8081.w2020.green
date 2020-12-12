@@ -13,8 +13,8 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-import common.Address;
-import common.Person;
+import model.common.Address;
+import model.common.Person;
 
 @Route("patientOverview")
 public class PatientOverview extends VerticalLayout{

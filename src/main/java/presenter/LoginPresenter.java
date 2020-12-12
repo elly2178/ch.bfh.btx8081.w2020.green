@@ -24,7 +24,7 @@ public class LoginPresenter implements LoginView.LoginViewListener {
 
 	@Override
 	public void onComponentEvent(LoginEvent event) {
-		boolean isAuthenticated = loginModel.authenticate(event);
+		boolean isAuthenticated = loginModel.authenticate(event.getUsername(), event.getPassword());
 		if (isAuthenticated) {
 			mainLayout.navigateToHomeView();
 		} else {

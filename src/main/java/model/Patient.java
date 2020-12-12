@@ -2,12 +2,13 @@ package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import common.Address; 
-import common.Person;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import model.common.Address;
+import model.common.Person;
 
 @Entity
 @Table(name = "Patients")

@@ -16,7 +16,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 
-		<jpa.version>2.2</jpa.version>
+		<postgresql.version>42.2.18</postgresql.version>
+		<eclipselink.version>2.5.2-M1</eclipselink.version>
 		<vaadin.version>14.4.2</vaadin.version>
 
 		<drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
@@ -106,9 +107,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>javax.persistence-api</artifactId>
-			<version>${jpa.version}</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>${eclipselink.version}</version>
 		</dependency>
 
 		<dependency>

@@ -1,12 +1,12 @@
 package model;
 
-import common.Address;
-import common.Person;
-
 import java.time.LocalDate;
 import java.util.*;
 
 import javax.persistence.*;
+
+import model.common.Address;
+import model.common.Person;
 /**
  * Class representing a doctor.
  */
