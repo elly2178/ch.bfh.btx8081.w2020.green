@@ -1,18 +1,20 @@
 package model;
 
-import common.Address;
-import common.Person;
-
 import java.time.LocalDate;
 import java.util.*;
 
 import javax.persistence.*;
+
+import model.common.Address;
+import model.common.Person;
 /**
  * Class representing a doctor.
  */
 
 @Entity
+@Table(name = "Doctors")
 public class Doctor extends Person {
+
 
 
     @Id
@@ -21,7 +23,7 @@ public class Doctor extends Person {
     private String title;
     private String location;
 
-    @ManyToOne
+    @OneToMany
     private List<Patient> patients;
 
 

@@ -10,10 +10,12 @@ import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLayout;
 
+import view.common.MainLayout;
+
 /**
  * Diaries view for patients to add new diary entries.
  */
-@Route(value = "diaries", layout = HomeView.class)
+@Route(value = "diaries", layout = MainLayout.class)
 public class DiariesView extends VerticalLayout {
 
 	public DiariesView() {

@@ -4,7 +4,7 @@ import com.vaadin.flow.component.login.AbstractLogin.LoginEvent;
 
 import model.LoginModel;
 import view.LoginView;
-import view.MainView;
+import view.common.MainLayout;
 
 /**
  * Login Presenter combines the view and data model.
@@ -13,20 +13,20 @@ public class LoginPresenter implements LoginView.LoginViewListener {
 	private static final long serialVersionUID = -326401691991648229L;
 	private transient LoginModel loginModel;
 	private transient LoginView loginView;
-	private MainView mainView;
-
-	public LoginPresenter(LoginModel model, LoginView loginView, MainView mainView) {
+	private MainLayout mainLayout;
+	
+	public LoginPresenter(LoginModel model, LoginView loginView, MainLayout mainLayout) {
 		this.loginModel = model;
 		this.loginView = loginView;
 		this.loginView.addListener(this);
-		this.mainView = mainView;
+		this.mainLayout = mainLayout;
 	}
 
 	@Override
 	public void onComponentEvent(LoginEvent event) {
-		boolean isAuthenticated = loginModel.authenticate(event);
+		boolean isAuthenticated = loginModel.authenticate(event.getUsername(), event.getPassword());
 		if (isAuthenticated) {
-			mainView.createNavigation();
+			mainLayout.navigateToHomeView();
 		} else {
 			loginView.getLoginFormComponent().setError(true);
 		}

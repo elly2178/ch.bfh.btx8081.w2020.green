@@ -2,13 +2,16 @@ package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import common.Address; 
-import common.Person;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import model.common.Address;
+import model.common.Person;
 
 @Entity
+@Table(name = "Patients")
 public class Patient extends Person{
 
 	@Id
@@ -21,7 +24,9 @@ public class Patient extends Person{
 	int combined = ybocs + mood;
 	LocalDate birthDate = LocalDate.of(1989, 05, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
-	
+
+
+
 	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
 			String email, String phonenumber) {
 		super(firstName, secondName, birthDate, gender, address, email, phonenumber);
@@ -29,7 +34,7 @@ public class Patient extends Person{
 	}
 
 	public Patient() {
-
+		
 	}
 
 	//calculateAVr score

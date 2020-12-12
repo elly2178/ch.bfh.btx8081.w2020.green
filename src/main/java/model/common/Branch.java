@@ -1,4 +1,4 @@
-package common;
+package model.common;
 
 /**
  * Class representing a branch.

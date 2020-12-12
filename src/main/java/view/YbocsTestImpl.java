@@ -12,6 +12,7 @@ import com.vaadin.flow.router.Route;
 
 import model.YbocsModel;
 import presenter.YbocsPresenter;
+import view.common.MainLayout;
 
 /**
  * vaadin
@@ -19,7 +20,7 @@ import presenter.YbocsPresenter;
  * @author ADEK
  *
  */
-@Route(value = "patient/ybocstest", layout = HomeView.class)
+@Route(value = "patient/ybocstest", layout = MainLayout.class)
 public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 
 	private ArrayList<IYbocsTestViewListener> listeners = new ArrayList<IYbocsTestViewListener>();

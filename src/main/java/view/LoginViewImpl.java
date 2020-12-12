@@ -7,7 +7,7 @@ import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "login", layout = HomeView.class)
+@Route(value = "login")
 public class LoginViewImpl extends VerticalLayout implements LoginView {
 	private static final long serialVersionUID = 5694264706543533720L;
 

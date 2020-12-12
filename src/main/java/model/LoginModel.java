@@ -1,6 +1,5 @@
 package model;
 
-import com.vaadin.flow.component.login.AbstractLogin.LoginEvent;
 import com.vaadin.flow.server.VaadinSession;
 
 import core.Role;
@@ -18,11 +17,11 @@ public class LoginModel {
 		setRole(Role.ANONYMOUS);
 	}
 
-	public boolean authenticate(LoginEvent e) {
-		if (e.getUsername().equals(PATIENT_USERNAME) && e.getPassword().equals(PATIENT_PASSWORD)) {
+	public boolean authenticate(String username, String password) {
+		if (username.equals(PATIENT_USERNAME) && password.equals(PATIENT_PASSWORD)) {
 			setRole(Role.PATIENT);
 			return true;
-		} else if (e.getUsername().equals(DOCTOR_USERNAME) && e.getPassword().equals(DOCTOR_PASSWORD)) {
+		} else if (username.equals(DOCTOR_USERNAME) && password.equals(DOCTOR_PASSWORD)) {
 			setRole(Role.DOCTOR);
 			return true;
 		} else {

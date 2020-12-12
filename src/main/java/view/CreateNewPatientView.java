@@ -11,7 +11,9 @@ import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "newPatient", layout = HomeView.class)
+import view.common.MainLayout;
+
+@Route(value = "newPatient", layout = MainLayout.class)
 public class CreateNewPatientView extends VerticalLayout {
 	
 	public CreateNewPatientView() {
