@@ -22,12 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Adding JPA Annotations">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added more code, Diary. DBManager">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_5_2_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/DBManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_17.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Diary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/testDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/testDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +59,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/common/Address.java" root0="SKIP_HIGHLIGHTING" />
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1jLVXWEzGU98M4YZM4Os8j9QmBl" />
   <component name="ProjectLevelVcsManager">
@@ -67,10 +81,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -85,17 +99,39 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch.bfh.btx8081.w2020.green" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.LoginModelTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LoginModelTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -341,7 +377,8 @@
     <MESSAGE value="Added basic code Doctor" />
     <MESSAGE value="Doctor to model" />
     <MESSAGE value="Adding JPA Annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding JPA Annotations" />
+    <MESSAGE value="Added more code, Diary. DBManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more code, Diary. DBManager" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

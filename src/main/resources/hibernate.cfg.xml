@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://147.87.116.213/jimen1</property> <!-- BD Mane -->
+    <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+    <property name="connection.username">Sudierende</property> <!-- DB User -->
+    <property name="connection.password">db-2017</property> <!-- DB Password -->
+
+    <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property> <!-- DB Dialect -->
+    <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+
+    <property name="show_sql">true</property> <!-- Show SQL in console -->
+    <property name="format_sql">true</property> <!-- Show SQL formatted -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
