@@ -18,12 +18,13 @@ public class HomeView extends VerticalLayout implements RouterLayout {
 	private static final long serialVersionUID = -2515746681908568218L;
 
 	public HomeView() {
-		Role role = (Role) VaadinSession.getCurrent().getAttribute("role");
-		if (role == null) {
-			navigateTo("login");
-			return;
-		}
-		addMenuBar(role);
+		add("Willkommen im Leaf Doctors Portal");
+//		Role role = (Role) VaadinSession.getCurrent().getAttribute("role");
+//		if (role == null) {
+//			navigateTo("login");
+//			return;
+//		}
+//		addMenuBar(role);
 	}
 
 	private void addMenuBar(Role role) {
