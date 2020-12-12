@@ -5,8 +5,13 @@ import java.util.ArrayList;
 import common.Address; 
 import common.Person;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Patient extends Person{
-		
+
+	@Id
 	private int pid;
 	private String healthInsuranceName;
 	private ArrayList<String> diaries = new ArrayList();
@@ -22,6 +27,11 @@ public class Patient extends Person{
 		super(firstName, secondName, birthDate, gender, address, email, phonenumber);
 		// TODO Auto-generated constructor stub
 	}
+
+	public Patient() {
+
+	}
+
 	//calculateAVr score
 	public float calculateAvarageScore() {
 		int inputTime = 14;

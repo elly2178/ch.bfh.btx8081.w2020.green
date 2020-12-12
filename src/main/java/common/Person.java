@@ -12,8 +12,8 @@ import java.time.LocalDate;
 public abstract class Person {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int Id;
+	@GeneratedValue(strategy = GenerationType.TABLE)
+	private int id;
 	private String firstName;
 	private String secondName;
 	private LocalDate birthDate;

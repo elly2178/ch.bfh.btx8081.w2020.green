@@ -15,15 +15,14 @@ import javax.persistence.*;
 public class Doctor extends Person {
 
 
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     private String title;
     private String location;
 
-    //@OneToMany
-    //private final List<Patient> patients;
+    @ManyToOne
+    private List<Patient> patients;
 
 
     public Doctor(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
