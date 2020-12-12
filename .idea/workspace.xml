@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Adding JPA Annotations">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +83,19 @@
     <option name="myCommands">
       <command value="mvn jetty:run" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -153,7 +168,12 @@
       <workItem from="1607487904360" duration="1247000" />
       <workItem from="1607489266363" duration="313000" />
       <workItem from="1607489592062" duration="155000" />
-      <workItem from="1607491771075" duration="911000" />
+      <workItem from="1607491771075" duration="3495000" />
+      <workItem from="1607607410984" duration="383000" />
+      <workItem from="1607650960986" duration="832000" />
+      <workItem from="1607676852714" duration="177000" />
+      <workItem from="1607700661496" duration="1447000" />
+      <workItem from="1607747516259" duration="2240000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -281,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607489674208</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adding JPA Annotations">
+      <created>1607521365511</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607521365511</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
