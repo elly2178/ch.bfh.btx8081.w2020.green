@@ -63,7 +63,7 @@ public class PatientOverview extends VerticalLayout{
 
 	        CrudI18n customI18n = CrudI18n.createDefault();
 	        customI18n.setEditItem("Update Patient");
-	        customI18n.setNewItem("New Patient");
+	        customI18n.setNewItem("Add new Patient");
 	        crud.setI18n(customI18n);
 
 	        crud.addSaveListener(saveEvent -> {
@@ -95,8 +95,7 @@ public class PatientOverview extends VerticalLayout{
 
 	    private Grid<Person> createGrid() {
 	        Grid<Person> grid = new Grid<>();
-	        grid.addColumn(c -> c.getFirstName()).setHeader("First name")
-	                .setWidth("160px");
+	        grid.addColumn(c -> c.getFirstName()).setHeader("First name");
 	        grid.addColumn(c -> c.getSecondName()).setHeader("Last name");
 	        grid.addColumn(c -> c.isGender()).setHeader("Gender");
 	        grid.addColumn(c -> c.getBirthDate()).setHeader("Birthdate");
@@ -152,10 +151,10 @@ public class PatientOverview extends VerticalLayout{
 	        binder.bind(firstName, Person::getFirstName, Person::setFirstName);
 	        binder.bind(secondName, Person::getSecondName, Person::setSecondName);
 	        binder.bind(email, Person::getEmail, Person::setEmail);
-	        //binder.bind(address, Person::getAddress, Person::setAddress);
-	        //binder.bind(city, Person::getCity, Person::setCity);
-	        //binder.bind(zip, Person::getZip, Person::setZip);
-	        //binder.bind(country, Person::getCountry, Person::setCountry);
+	        //binder.bind(street, Address::getStreet, Address::setStreet);
+	        //binder.bind(city, Address::getCity, Address::setCity);
+	        //binder.bind(postalCode, Address::getZip, Address::setZip);
+	        //binder.bind(country, Address::getCountry, Address::setCountry);
 	        binder.bind(phone, Person::getPhone, Person::setPhone);
 
 	        return new BinderCrudEditor<>(binder, form);
