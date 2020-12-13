@@ -22,17 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Rearranged Repository connection with eclipselink. Hybernate showed too many troubles.">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added JPA Querries, expanded DBManager">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ch_bfh_btx8081_w2020_green_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch.bfh.btx8081.w2020.green.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Diary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/testDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/testDB.java" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +55,6 @@
       </set>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="JavaeeView">
     <option name="showModules" value="false" />
   </component>
@@ -79,6 +74,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="59ef0386-d6c2-4f89-bb8f-916f9c11b292" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -97,6 +93,9 @@
       <recent name="$PROJECT_DIR$/doc/task02" />
       <recent name="$PROJECT_DIR$/doc/storyboards" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -104,17 +103,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch.bfh.btx8081.w2020.green" />
       <extension name="coverage">
@@ -217,7 +205,9 @@
       <workItem from="1607806044187" duration="783000" />
       <workItem from="1607806961106" duration="234000" />
       <workItem from="1607862126419" duration="184000" />
-      <workItem from="1607862327660" duration="4309000" />
+      <workItem from="1607862327660" duration="6003000" />
+      <workItem from="1607868435559" duration="3677000" />
+      <workItem from="1607872156612" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -359,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607802325398</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Rearranged Repository connection with eclipselink. Hybernate showed too many troubles.">
+      <created>1607866744835</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607866744835</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +391,8 @@
     <MESSAGE value="Adding JPA Annotations" />
     <MESSAGE value="Added more code, Diary. DBManager" />
     <MESSAGE value="Rearranged Repository connection with eclipselink. Hybernate showed too many troubles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearranged Repository connection with eclipselink. Hybernate showed too many troubles." />
+    <MESSAGE value="Added JPA Querries, expanded DBManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JPA Querries, expanded DBManager" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
