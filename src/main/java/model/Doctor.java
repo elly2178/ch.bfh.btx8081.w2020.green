@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -13,7 +14,7 @@ import model.common.Person;
 
 @Entity
 @Table(name = "doctors")
-public class Doctor extends Person {
+public class Doctor extends Person implements Serializable {
 
 
 

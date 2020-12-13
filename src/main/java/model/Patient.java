@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ import model.common.Person;
 
 @Entity
 @Table(name = "Patients")
-public class Patient extends Person{
+public class Patient extends Person implements Serializable {
 
 	@Id
 	private int pid;

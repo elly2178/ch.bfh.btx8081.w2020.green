@@ -2,6 +2,7 @@ package model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "diaries")
-public class Diary {
+public class Diary implements Serializable {
 
     @Id
     private String id;
