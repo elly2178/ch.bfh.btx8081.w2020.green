@@ -12,7 +12,7 @@ import model.common.Person;
  */
 
 @Entity
-@Table(name = "Doctors")
+@Table(name = "doctors")
 public class Doctor extends Person {
 
 
@@ -20,7 +20,11 @@ public class Doctor extends Person {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
+
+    @Column
     private String title;
+
+    @Column
     private String location;
 
     @OneToMany

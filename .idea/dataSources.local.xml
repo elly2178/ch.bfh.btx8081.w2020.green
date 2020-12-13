@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="LeafDoctors" uuid="5090e9b4-b99e-4aa9-a8b8-162b0045f3b7">
+    <data-source name="jimen1@147.87.116.213" uuid="59ef0386-d6c2-4f89-bb8f-916f9c11b292">
       <database-info product="PostgreSQL" version="9.5.19" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.5.19" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -10,8 +10,8 @@
       <user-name>Studierende</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="postgres">
-            <node kind="schema" qname="public" />
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
           </node>
         </introspection-scope>
       </schema-mapping>

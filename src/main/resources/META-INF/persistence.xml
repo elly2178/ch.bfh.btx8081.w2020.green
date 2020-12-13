@@ -4,18 +4,20 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-  <persistence-unit name="persistenceUnitName" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="ch.bfh.btx8081.2020.green" transaction-type="RESOURCE_LOCAL">
 
+    <class>model.Doctor</class>
+    <class>model.Diary</class>
+    <class>model.Patient</class>
+    <class>model.YbocsModel</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://147.87.116.213/jimen1" /> <!-- BD Mane -->
       <property name="javax.persistence.jdbc.user" value="Studierende" /> <!-- DB User -->
       <property name="javax.persistence.jdbc.password" value="db-2017" /> <!-- DB Password -->
+      <property name="eclipselink.ddl-generation" value="create-tables" />
+      <property name="eclipselink.ddl-generation.output-mode"	value="both" />
 
-      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/> <!-- DB Dialect -->
-      <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
-      <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
-      <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
     </properties>
 
   </persistence-unit>

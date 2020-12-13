@@ -14,13 +14,22 @@ public abstract class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id;
+
+	@Column
 	private String firstName;
+
+	@Column
 	private String secondName;
+	@Column
 	private LocalDate birthDate;
+	@Column
 	private boolean gender;
+	@Column
 	private String email;
+	@Column
 	private String phone;
 
+	@Column
 	private Address address;
 
 
