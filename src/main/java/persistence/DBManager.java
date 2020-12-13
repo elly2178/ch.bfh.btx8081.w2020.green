@@ -15,9 +15,8 @@ public class DBManager {
     private static EntityManager em;
     private static final String PERSISTENCE_UNIT_NAME = "ch.bfh.btx.8081.w2020.green";
 
-    String url = "jdbc:postgresql://147.87.116.2013/jimen1";
-
-    Properties props = new Properties();
+/*    String url = "jdbc:postgresql://147.87.116.2013/jimen1";
+    Properties props = new Properties();*/
 
 
     public static DBManager getInstance() {
@@ -80,6 +79,10 @@ public class DBManager {
         }
     }
 
+    public static void removeDoctor(int id){
+
+    }
+
     public static void addPatient(int id, String title, String firstName, String secondName, String phone, String email, boolean gender){
         EntityTransaction et = null;
         try {
@@ -125,6 +128,10 @@ public class DBManager {
         }catch(NoResultException exception){
             exception.printStackTrace();
         }
+    }
+
+    public static void removePatient(int id){
+
     }
 
 }

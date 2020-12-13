@@ -26,4 +26,13 @@ public class Branch {
 	public int getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "Branch{" +
+				"branchName='" + branchName + '\'' +
+				", phoneNumber=" + phoneNumber +
+				", id=" + id +
+				'}';
+	}
 }

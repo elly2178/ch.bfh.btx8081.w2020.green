@@ -31,8 +31,7 @@ public class Doctor extends Person implements Serializable {
     @OneToMany
     private List<Patient> patients;
 
-
-    public Doctor(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
+    public Doctor(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone, String title) {
         super(firstName, secondName, birthDate, gender, address, email, phone);
     }
 
@@ -40,9 +39,8 @@ public class Doctor extends Person implements Serializable {
         super();
     }
 
-
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -56,5 +54,7 @@ public class Doctor extends Person implements Serializable {
     public void setLocation(String location) {
         this.location = location;
     }
+
+
 
 }
