@@ -1,4 +1,8 @@
 /*
+
+TO BE ALLOCATED PROPERLY
+
+
 package persistence;
 
 import model.Doctor;

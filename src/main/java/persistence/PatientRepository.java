@@ -8,6 +8,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+//TO BE ALLOCATED PROPERLY
 public class PatientRepository {
 
     private static EntityManager em;

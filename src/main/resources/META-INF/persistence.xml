@@ -17,6 +17,8 @@
       <property name="javax.persistence.jdbc.password" value="db-2017" /> <!-- DB Password -->
       <property name="eclipselink.ddl-generation" value="create-tables" />
       <property name="eclipselink.ddl-generation.output-mode"	value="both" />
+      <property name="hibernate.connection.url" value="jdbc:postgresql://147.87.116.213:5432/jimen1"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
 
     </properties>
 
