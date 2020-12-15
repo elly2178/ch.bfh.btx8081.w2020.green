@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "diaries")
-public class Diary implements Serializable {
+public class DiaryModel implements Serializable {
 
     @Id
     private String id;
@@ -24,32 +24,42 @@ public class Diary implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
-    public Diary(){
+    public DiaryModel() {
+    
     }
-
-    public Diary(String dailyEntry, Date creationDate){
-        this.dailyEntry = dailyEntry;
+    public DiaryModel(String dailyEntry, Date creationDate){
+       this.dailyEntry = dailyEntry;
         this.creationDate = new Date(creationDate.getTime());
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public String getId() {
+		return id;
+	}
 
-    @Id
-    public String getId() {
-        return id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getDailyEntry() {
-        return dailyEntry;
-    }
+	public String getDailyEntry() {
+		return String.valueOf(dailyEntry);
+	}
 
-    public void setDailyEntry(String dailyEntry) {
-        this.dailyEntry = dailyEntry;
-    }
+	public void setDailyEntry(String dailyEntry) {
+		this.dailyEntry = dailyEntry;
+	}
+
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
     public void addEntry(){
         diariestext.add(this.dailyEntry);
     }
+
+   
 }
+

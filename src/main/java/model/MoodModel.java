@@ -1,5 +1,7 @@
 package model;
 
+import javax.persistence.Id;
+
 public class MoodModel {
 	private int moodScore;
 
@@ -19,3 +21,4 @@ public class MoodModel {
 		return String.valueOf(moodScore);
 	}
 }
+ 

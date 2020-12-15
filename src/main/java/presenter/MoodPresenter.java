@@ -4,21 +4,19 @@ import java.util.ArrayList;
 
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 
-import model.MoodModel;
+import model.MoodModel; 
 import view.IMoodTestView;
 
 public class MoodPresenter implements IMoodTestView.IMoodTestViewListener{
 
 	private MoodModel model;
 	private IMoodTestView view;
-	//private int currentScore = 0;
 	
 	public MoodPresenter(MoodModel model, IMoodTestView view) {
 		this.model=model;
 		this.view = view;
 		view.addMoodListener(this);
-		view.setDisplay("0");
-		
+		view.setDisplay("0");		
 	}
 
 

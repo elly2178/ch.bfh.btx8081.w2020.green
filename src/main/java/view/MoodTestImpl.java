@@ -12,8 +12,9 @@ import com.vaadin.flow.router.Route;
 
 import model.MoodModel;
 import presenter.MoodPresenter;
-
-@Route("patient/moodtest")
+import view.common.MainLayout;
+ 
+@Route(value = "moodtest", layout = MainLayout.class)
 public class MoodTestImpl extends VerticalLayout implements IMoodTestView{
 	private ArrayList<IMoodTestViewListener> listeners = new ArrayList<IMoodTestViewListener>();
 	private ArrayList<RadioButtonGroup<Integer>> moodButtonGroups =  new ArrayList<RadioButtonGroup<Integer>>();
@@ -81,3 +82,4 @@ public class MoodTestImpl extends VerticalLayout implements IMoodTestView{
 		
 	}
 }
+
