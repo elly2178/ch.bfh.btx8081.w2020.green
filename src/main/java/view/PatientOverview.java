@@ -168,6 +168,7 @@ public class PatientOverview extends VerticalLayout{
 	        Binder<Patient> binder = new Binder<>(Patient.class);
 	        binder.bind(firstName, Patient::getFirstName, Patient::setFirstName);
 	        binder.bind(secondName, Patient::getSecondName, Patient::setSecondName);
+	        //binder.bind(gender, Patient::getGender, Patient::isGender);
 	        binder.bind(birthDate, Patient::getBirthDate, Patient::setBirthDate);
 	        binder.bind(email, Patient::getEmail, Patient::setEmail);
 	        //binder.bind(street, Address::getStreet, Address::setStreet);
