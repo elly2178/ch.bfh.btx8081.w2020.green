@@ -67,13 +67,13 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        
 	        crud.addSaveListener(e -> listeners.forEach(event -> event.onComponentEvent(e)));
 			
-	       // crud.addSaveListener(saveEvent -> {
-	         //   Patient toSave = saveEvent.getItem();
-	            // Save the item in the database
-	           // if (!dataProvider.getItems().contains(toSave)) {
-	             //   dataProvider.getItems().add(toSave);
-	           // }
-	       // });
+	        crud.addSaveListener(saveEvent -> {
+	          Patient toSave = saveEvent.getItem();
+	          // Save the item in the database
+	           if (!dataProvider.getItems().contains(toSave)) {
+	                dataProvider.getItems().add(toSave);
+	           }
+	        });
 	        /*
 	        toSave.addClickListener(event -> {
 	            if (binder.writeBeanIfValid(contactBeingEdited)) {
@@ -136,7 +136,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        gender.setRequiredIndicatorVisible(true);
 	        gender.setLabel("Gender");
 	        setColspan(gender, 2);
-	        gender.setItems("female", "male", "other");
+	        gender.setItems("f", "m", "o");
 	        
 	        DatePicker birthDate = new DatePicker("Date of birth");
 	        birthDate.setRequiredIndicatorVisible(true);
