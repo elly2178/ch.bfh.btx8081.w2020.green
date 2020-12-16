@@ -95,7 +95,8 @@ public class MainLayout extends VerticalLayout implements RouterLayout {
 		MenuItem patients = menuBar.addItem("Patients");
 		SubMenu patientsSubMenu = patients.getSubMenu();
 		patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
-		patientsSubMenu.addItem("Ybocs-Test", e -> navigateTo("patient/ybocstest"));
+		patientsSubMenu.addItem("Ybocs-Test", e -> navigateTo("ybocstest"));
+		patientsSubMenu.addItem("Mood-Test", e -> navigateTo("moodtest"));
 		addLogoutItem(menuBar);
 	}
 

@@ -20,7 +20,7 @@ import view.common.MainLayout;
  * @author ADEK
  *
  */
-@Route(value = "patient/ybocstest", layout = MainLayout.class)
+@Route(value = "ybocstest", layout = MainLayout.class)
 public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 
 	private ArrayList<IYbocsTestViewListener> listeners = new ArrayList<IYbocsTestViewListener>();

@@ -1,8 +1,10 @@
 package core;
 
-import view.DiariesView;
+import view.DiaryViewImpl;
 import view.LoginViewImpl;
 import view.MainView;
+import view.YbocsTestImpl;
+import view.MoodTestImpl;
 
 /**
  * Available views within Leaf Doctors application.
@@ -12,8 +14,10 @@ public enum View {
 
 	HOME(MainView.class),
 	LOGIN(LoginViewImpl.class),
-	DIARY(DiariesView.class);
-
+	DIARY(DiaryViewImpl.class),
+	// added lines 17 to 20
+	YBOCS(YbocsTestImpl.class),
+	MOOD(MoodTestImpl.class);
 	private Class<?> viewClass;
 
 	private View(Class<?> viewClass) {

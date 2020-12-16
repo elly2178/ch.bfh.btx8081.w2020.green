@@ -13,7 +13,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 
-@Route("patient")
+@Route(value="patient")
 public class PatientViewImpl extends VerticalLayout implements IPatientView {
 
 	private List<IPatientViewListener> listeners = new ArrayList<IPatientViewListener>();
@@ -47,18 +47,18 @@ public class PatientViewImpl extends VerticalLayout implements IPatientView {
 		return new Button(oString, event -> getUI().get().navigate("patient/ybocstest"));
 	}
 	private Button createButton(String opeation) {
-		return new Button(opeation, event -> getUI().get().navigate("diaries"));
+		return new Button(opeation, event -> getUI().get().navigate("patient/diaries"));
 	}
 
 	 void RouterLink() {
-		 Div buttonsDiv = new Div();
-		 buttonsDiv.add(new RouterLink("diaries", DiariesView.class));
+		Div buttonsDiv = new Div();
+		buttonsDiv.add(new RouterLink("diaries", DiaryViewImpl.class));
 		 
 		Div buttonYbocsDiv = new Div();
 		buttonYbocsDiv.add(new RouterLink("ybocstest", YbocsTestImpl.class));
 		
-		//Div buttonMoodDiv = new Div();
-		//buttonMoodDiv.add(new RouterLink("your path name here", MoodImpl.class));
+		Div buttonMoodDiv = new Div();
+		buttonMoodDiv.add(new RouterLink("moodtest", MoodTestImpl.class));
 	 }
 	  
 

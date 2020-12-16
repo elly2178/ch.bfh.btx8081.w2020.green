@@ -58,10 +58,11 @@ public class HomeView extends VerticalLayout implements RouterLayout {
 	}
 
 	private void addPatientNavigation(MenuBar menuBar) {
-		MenuItem patients = menuBar.addItem("Patients");
-		SubMenu patientsSubMenu = patients.getSubMenu();
-		patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
-		patientsSubMenu.addItem("Ybocs-Test", e -> navigateTo("patient/ybocstest"));
+		//MenuItem patients = menuBar.addItem("Patients");
+		//SubMenu patientsSubMenu = patients.getSubMenu();
+		///patientsSubMenu.addItem("Diaries", e -> navigateTo("diaries"));
+		//patientsSubMenu.addItem("Ybocs-Test", e -> navigateTo("ybocstest"));
+		//patientsSubMenu.addItem("Mood-Test", e -> navigateTo("moodtest"));
 	}
 
 	private void addAnonymousNavigation(MenuBar menuBar) {
