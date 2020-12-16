@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public abstract class Person {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
 	@Column
 	private String firstName;

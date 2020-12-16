@@ -19,9 +19,6 @@ import javax.persistence.Table;
 @Table(name = "doctors")
 public class Doctor extends Person implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
 	@Column
 	private String title;
 	@Column
