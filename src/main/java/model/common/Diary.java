@@ -1,4 +1,4 @@
-package model;
+package model.common;
 
 
 import javax.persistence.*;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "diaries")
-public class DiaryModel implements Serializable {
+public class Diary implements Serializable {
 
     @Id
     private String id;
@@ -24,10 +24,10 @@ public class DiaryModel implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
-    public DiaryModel() {
+    public Diary() {
     
     }
-    public DiaryModel(String dailyEntry, Date creationDate){
+    public Diary(String dailyEntry, Date creationDate){
        this.dailyEntry = dailyEntry;
         this.creationDate = new Date(creationDate.getTime());
     }

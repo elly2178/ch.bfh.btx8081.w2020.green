@@ -2,12 +2,14 @@ package view;
 
 import java.util.ArrayList;
 
+import com.vaadin.flow.component.textfield.TextArea;
+
 public interface IDiaryView {
 
 	public void setUserInput(String display);
 	
 	interface IDiaryViewListener{
-		void buttonClick(String diariestext) ;
+		void buttonClick(ArrayList<TextArea> diariestext) ;
 	}
 	
 	public void addDiaryListener(IDiaryViewListener listener);
