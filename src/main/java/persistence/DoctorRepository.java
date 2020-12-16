@@ -1,11 +1,7 @@
-/*
-
-TO BE ALLOCATED PROPERLY
-
-
 package persistence;
 
-import model.Doctor;
+
+import model.common.Doctor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -17,7 +13,13 @@ public class DoctorRepository {
 
     private static EntityManager em;
 
-    public static void addDoctor(int id, String title, String firstName, String secondName, String location, String phone, String email, boolean gender){
+    public DoctorRepository(){
+        em = DBManager.getInstance().getEntityManager();
+    }
+    /**
+     *  Method adds a Doctor to the Database
+     */
+    public static void addDoctor(int id, String title, String firstName, String secondName, String location, String phone, String email, char gender){
         EntityTransaction et = null;
         try {
             et = em.getTransaction();
@@ -39,6 +41,10 @@ public class DoctorRepository {
         }
     }
 
+    /**
+     * Method gets a specific doctor from the Database with a specific ID
+     * @param id
+     */
     public static void getDoctor(int id){
         String query = "SELECT d FROM Doctor d WHERE d.id = :docID";
         TypedQuery<Doctor> tq = em.createQuery(query, Doctor.class);
@@ -52,6 +58,9 @@ public class DoctorRepository {
         }
     }
 
+    /**
+     * Method gets a list of all doctors in the Database.
+     */
     public static void getDoctors(){
         String strQuery = "SELECT d FROM Doctor d WHERE d.id IS NOT NULL";
         TypedQuery<Doctor> tq = em.createQuery(strQuery, Doctor.class);
@@ -66,8 +75,12 @@ public class DoctorRepository {
         }
     }
 
+    /**
+     * Method removes a doctor from the database with a specific ID
+     * @param id
+     */
     public static void removeDoctor(int id){
 
     }
 }
-*/
+

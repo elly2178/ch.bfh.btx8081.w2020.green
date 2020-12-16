@@ -1,10 +1,6 @@
 package model.common;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Class representing an address.
@@ -13,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "addresses")
 public class Address {
 
+	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
@@ -32,6 +29,10 @@ public class Address {
 		this.country = country;
 	}
 
+	public Address() {
+
+	}
+
 	public int getPostalCode() {
 		return postalCode;
 	}
@@ -46,5 +47,24 @@ public class Address {
 
 	public String getCountry() {
 		return country;
+	}
+
+	@Override
+	public String toString() {
+		return "Address{" +
+				"id=" + id +
+				", postalCode=" + postalCode +
+				", street='" + street + '\'' +
+				", city='" + city + '\'' +
+				", country='" + country + '\'' +
+				'}';
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
+		return id;
 	}
 }

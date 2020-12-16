@@ -105,4 +105,17 @@ public abstract class Person {
 		this.phone = phone;
 	}
 
+	@Override
+	public String toString() {
+		return "Person{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", secondName='" + secondName + '\'' +
+				", birthDate=" + birthDate +
+				", gender=" + gender +
+				", email='" + email + '\'' +
+				", phone='" + phone + '\'' +
+				", address=" + address.toString() +
+				'}';
+	}
 }
