@@ -54,7 +54,7 @@ public class HomeView extends VerticalLayout implements RouterLayout {
 	private void addDoctorNavigation(MenuBar menuBar) {
 		MenuItem patients = menuBar.addItem("Patients");
 		SubMenu patientsSubMenu = patients.getSubMenu();
-		patientsSubMenu.addItem("Patient Overview", e -> navigateTo("patientOverview"));
+		patientsSubMenu.addItem("Patient Summary", e -> navigateTo("patientSummary"));
 	}
 
 	private void addPatientNavigation(MenuBar menuBar) {

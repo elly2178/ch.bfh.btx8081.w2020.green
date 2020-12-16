@@ -87,7 +87,7 @@ public class MainLayout extends VerticalLayout implements RouterLayout {
 	private void addDoctorNavigation(MenuBar menuBar) {
 		MenuItem patients = menuBar.addItem("Patients");
 		SubMenu patientsSubMenu = patients.getSubMenu();
-		patientsSubMenu.addItem("Patient Overview", e -> navigateTo("patientOverview"));
+		patientsSubMenu.addItem("Patient Summary", e -> navigateTo("patientSummary"));
 		addLogoutItem(menuBar);
 	}
 
