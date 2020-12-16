@@ -2,6 +2,10 @@ package model.common;
 
 import java.time.LocalDate;
 
+/**
+ * Class represents a Staff member
+ */
+
 public class Staff extends Person {
 
 	private int staffId;
@@ -45,5 +49,15 @@ public class Staff extends Person {
 
 	public void setJoinedDate(LocalDate joinedDate) {
 		this.joinedDate = joinedDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Staff{" +
+				"staffId=" + staffId +
+				", department='" + department + '\'' +
+				", certification='" + certification + '\'' +
+				", joinedDate=" + joinedDate +
+				'}';
 	}
 }

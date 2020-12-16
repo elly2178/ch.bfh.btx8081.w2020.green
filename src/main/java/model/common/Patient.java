@@ -52,4 +52,17 @@ public class Patient extends Person implements Serializable {
 		}
 
 	}
+
+	@Override
+	public String toString() {
+		return "Patient{" +
+				"healthInsuranceName='" + healthInsuranceName + '\'' +
+				", diaries=" + diaries +
+				", ybocs=" + ybocs +
+				", mood=" + mood +
+				", combined=" + combined +
+				", birthDate=" + birthDate +
+				", dateToday=" + dateToday +
+				'}';
+	}
 }

@@ -52,4 +52,12 @@ public class Doctor extends Person implements Serializable {
 		this.location = location;
 	}
 
+	@Override
+	public String toString() {
+		return "Doctor{" +
+				"title='" + title + '\'' +
+				", location='" + location + '\'' +
+				", patients=" + patients +
+				'}';
+	}
 }
