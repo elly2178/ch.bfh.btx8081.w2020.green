@@ -1,7 +1,5 @@
 package view;
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -33,16 +31,18 @@ import com.vaadin.flow.router.Route;
 import model.common.Patient;
 import view.common.MainLayout;
 
-@Route(value = "patientOverview", layout = MainLayout.class)
-public class PatientOverview extends VerticalLayout{
+@Route(value = "patientSummary", layout = MainLayout.class)
+public class PatientSummaryViewImpl extends VerticalLayout implements PatientSummaryView {
 	
+	private List<PatientSummarySaveListener> listeners = new ArrayList<>();
+	private Crud<Patient> crud;
 	
 	/**
 	 * 
 	private static final long serialVersionUID = 1L;
 	TextField filterText = new TextField();
 	Button button = new Button("Click me", event -> Notification.show("Clicked!"));
-	public PatientOverview() {
+	public PatientSummaryView() {
 		List<Patient> PatientList = new ArrayList<>();
 		Grid<Patient> grid = new Grid<>(Patient.class);	
 		grid.setItems(PatientList);
@@ -51,7 +51,7 @@ public class PatientOverview extends VerticalLayout{
 		}	
 	 */
 	
-	 public PatientOverview() {
+	 public PatientSummaryViewImpl() {
 	        setSizeFull();
 	        ListDataProvider<Patient> dataProvider = createDataProvider();
 	        Crud<Patient> crud = new Crud<>(Patient.class, createGrid(), createPatientEditor());
@@ -64,14 +64,16 @@ public class PatientOverview extends VerticalLayout{
 	        customI18n.setEditItem("Update Patient");
 	        customI18n.setNewItem("Add new Patient");
 	        crud.setI18n(customI18n);
+	        
+	        crud.addSaveListener(e -> listeners.forEach(event -> event.onComponentEvent(e)));
 			
-	        crud.addSaveListener(saveEvent -> {
-	            Patient toSave = saveEvent.getItem();
+	       // crud.addSaveListener(saveEvent -> {
+	         //   Patient toSave = saveEvent.getItem();
 	            // Save the item in the database
-	            if (!dataProvider.getItems().contains(toSave)) {
-	                dataProvider.getItems().add(toSave);
-	            }
-	        });
+	           // if (!dataProvider.getItems().contains(toSave)) {
+	             //   dataProvider.getItems().add(toSave);
+	           // }
+	       // });
 	        /*
 	        toSave.addClickListener(event -> {
 	            if (binder.writeBeanIfValid(contactBeingEdited)) {
@@ -92,8 +94,6 @@ public class PatientOverview extends VerticalLayout{
 	            dataProvider.getItems().remove(deleteEvent.getItem());
 	        });
 	        
-	
-
 	        add(crud);
 	    }
 
@@ -129,6 +129,7 @@ public class PatientOverview extends VerticalLayout{
 	        TextField secondName = new TextField("Last name");
 	        secondName.setRequiredIndicatorVisible(true);
 	        setColspan(secondName, 2);
+	       
 	        
 	        ComboBox<String> gender = new ComboBox<>();
 	        gender.setAllowCustomValue(true);
@@ -195,11 +196,7 @@ public class PatientOverview extends VerticalLayout{
 	                .withValidator(new EmailValidator("Incorrect email address"))
 	                .bind(Patient::getEmail, Patient::setEmail);
 
-	       
-	        
-
 	        return new BinderCrudEditor<>(binder, form);
-
 	        
 	    }
 
@@ -213,7 +210,14 @@ public class PatientOverview extends VerticalLayout{
 	                .map(iso -> new Locale("", iso).getDisplayCountry()).sorted()
 	                .collect(Collectors.toList());
 	    }
-	
-		
-
+	    
+	    @Override
+	    public void addListener(PatientSummarySaveListener listener) {
+	    	listeners.add(listener);
+	    }
+	    
+	    @Override
+	    public Crud<Patient> getCrud() {
+	    	return crud;
+	    }
 }
