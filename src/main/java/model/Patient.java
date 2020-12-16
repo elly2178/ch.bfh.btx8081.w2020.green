@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 import model.common.Address;
 import model.common.Person;
 
@@ -28,9 +29,10 @@ public class Patient extends Person implements Serializable {
 
 
 
-	public Patient(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address,
-			String email, String phonenumber) {
-		super(firstName, secondName, birthDate, gender, address, email, phonenumber);
+	public Patient(String firstName, String secondName, LocalDate birthDate, Boolean gender, Address address,
+			String email, String phone) {
+		super(firstName, secondName, birthDate, gender, address, email, phone);
+
 		// TODO Auto-generated constructor stub
 	}
 

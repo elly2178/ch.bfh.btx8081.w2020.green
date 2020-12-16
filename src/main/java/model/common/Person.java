@@ -1,6 +1,9 @@
 package model.common;
 
 import javax.persistence.*;
+
+
+
 import java.time.LocalDate;
 
 
@@ -23,7 +26,7 @@ public abstract class Person {
 	@Column
 	private LocalDate birthDate;
 	@Column
-	private boolean gender;
+	private Boolean gender;
 	@Column
 	private String email;
 	@Column
@@ -33,7 +36,7 @@ public abstract class Person {
 	private Address address;
 
 
-	public Person(String firstName, String secondName, LocalDate birthDate, boolean gender, Address address, String email, String phone) {
+	public Person(String firstName, String secondName, LocalDate birthDate, Boolean gender, Address address, String email, String phone) {
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -73,11 +76,11 @@ public abstract class Person {
 		this.birthDate = birthDate;
 	}
 
-	public boolean isGender() {
+	public Boolean isGender() {
 		return gender;
 	}
 
-	public void setGender(boolean gender) {
+	public void setGender(Boolean gender) {
 		this.gender = gender;
 	}
 
