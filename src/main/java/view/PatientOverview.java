@@ -30,7 +30,7 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.function.SerializablePredicate;
 import com.vaadin.flow.router.Route;
 
-import model.Patient;
+import model.common.Patient;
 import view.common.MainLayout;
 
 @Route(value = "patientOverview", layout = MainLayout.class)
