@@ -1,6 +1,6 @@
 package presenter;
 
-import model.Patient;
+import model.common.Patient;
 import view.IPatientView;
 
 public class PatientPresenter implements IPatientView.IPatientViewListener {
