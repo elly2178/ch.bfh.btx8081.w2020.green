@@ -6,13 +6,13 @@ import javax.persistence.*;
  * Class representing an address.
  */
 @Entity
-@Table(name = "addresses")
+@Table
 public class Address {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private int id;
+	private String id;
 	@Column
 	private int postalCode;
 	@Column

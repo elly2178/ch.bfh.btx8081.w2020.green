@@ -22,16 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added Diagram for Task 6">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added comments to classes for javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DiaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DiaryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DoctorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DoctorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/LeafDoctorsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/LeafDoctorsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/PatientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/testDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/testDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Address.java" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +99,19 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch.bfh.btx8081.w2020.green" />
       <extension name="coverage">
@@ -218,6 +224,12 @@
       <workItem from="1607881479073" duration="903000" />
       <workItem from="1607883035100" duration="1935000" />
       <workItem from="1607888901630" duration="393000" />
+      <workItem from="1607941141913" duration="1720000" />
+      <workItem from="1608114138718" duration="55000" />
+      <workItem from="1608114209994" duration="492000" />
+      <workItem from="1608116063734" duration="22000" />
+      <workItem from="1608125705626" duration="2291000" />
+      <workItem from="1608128053734" duration="4910000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -401,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607881239874</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added Diagram for Task 6">
+      <created>1607941429381</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607941429381</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added comments to classes for javadoc">
+      <created>1608130034058</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1608130034058</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +467,8 @@
     <MESSAGE value="Added Serializable interface." />
     <MESSAGE value="Basic Structure for Repositories" />
     <MESSAGE value="Added Diagram for Task 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Diagram for Task 6" />
+    <MESSAGE value="Added comments to classes for javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments to classes for javadoc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
