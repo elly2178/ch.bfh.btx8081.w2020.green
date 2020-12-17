@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * Class representing a doctor.
  */
 @Entity
-@Table(name = "doctors")
+@Table
 public class Doctor extends Person implements Serializable {
 
 	@Column
@@ -52,6 +52,11 @@ public class Doctor extends Person implements Serializable {
 		this.location = location;
 	}
 
+	public void setPatients(List<Patient> patients) {
+		this.patients = patients;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Doctor{" +
@@ -60,4 +65,6 @@ public class Doctor extends Person implements Serializable {
 				", patients=" + patients +
 				'}';
 	}
+
+
 }
