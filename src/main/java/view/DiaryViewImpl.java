@@ -21,6 +21,7 @@ import view.common.MainLayout;
  */ 
 @Route(value = "diaries", layout = MainLayout.class)
 public class DiaryViewImpl extends VerticalLayout implements IDiaryView {
+	private static final long serialVersionUID = -1763030112751433022L;
 	private List<IDiaryViewListener> listeners = new ArrayList<IDiaryViewListener>();
 	
 	private TextField userInput = new TextField();
