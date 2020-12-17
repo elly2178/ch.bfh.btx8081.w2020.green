@@ -2,6 +2,7 @@ package persistence;
 
 
 import model.common.Doctor;
+import model.common.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -43,7 +44,7 @@ public class DoctorRepository {
 
     /**
      * Method gets a specific doctor from the Database with a specific ID
-     * @param id
+     * @param id unique ID
      */
     public static void getDoctor(int id){
         String query = "SELECT d FROM Doctor d WHERE d.id = :docID";
@@ -77,9 +78,24 @@ public class DoctorRepository {
 
     /**
      * Method removes a doctor from the database with a specific ID
-     * @param id
+     * @param id unique ID
      */
     public static void removeDoctor(int id){
+        EntityTransaction et = null;
+        Doctor doc = new Doctor();
+
+        try {
+            et = em.getTransaction();
+            et.begin();
+            doc = (Doctor) em.find(Person.class, id);
+            em.remove(doc);
+            em.persist(doc);
+            et.commit();
+
+        }catch (NoResultException exception){
+            exception.printStackTrace();
+        }
+
 
     }
 }
