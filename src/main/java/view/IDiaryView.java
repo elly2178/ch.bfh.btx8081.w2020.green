@@ -9,7 +9,7 @@ public interface IDiaryView {
 	public void setUserInput(String display);
 	
 	interface IDiaryViewListener{
-		void buttonClick(ArrayList<TextArea> diariestext) ;
+		void buttonClick(String diariestext);
 	}
 	
 	public void addDiaryListener(IDiaryViewListener listener);

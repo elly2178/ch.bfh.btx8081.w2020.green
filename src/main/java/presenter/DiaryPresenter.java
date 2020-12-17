@@ -20,9 +20,9 @@ public class DiaryPresenter implements IDiaryView.IDiaryViewListener {
 	}
 
 	@Override
-	public void buttonClick(ArrayList<TextArea> diariestext) {
+	public void buttonClick(String diariestext) {
 		 
-		//model.setDailyEntry(diariestext);
+		model.setDailyEntry(diariestext);
 		// String textPattern = String.format("Diary input from %s",
 		// LocalDate.now().toString());
 		// view.showNotification(textPattern);

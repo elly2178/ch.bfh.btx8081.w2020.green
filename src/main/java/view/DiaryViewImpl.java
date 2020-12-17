@@ -21,46 +21,33 @@ import view.common.MainLayout;
  */ 
 @Route(value = "diaries", layout = MainLayout.class)
 public class DiaryViewImpl extends VerticalLayout implements IDiaryView {
-	private ArrayList<IDiaryViewListener> listeners = new ArrayList<IDiaryViewListener>();
-	private ArrayList<TextArea> diariestext = new ArrayList<TextArea>();
+	private List<IDiaryViewListener> listeners = new ArrayList<IDiaryViewListener>();
 	
 	private TextField userInput = new TextField();
+	private TextArea textArea; 
 	
 	public DiaryViewImpl() {
 		Diary diaryModel = new Diary();
 		new DiaryPresenter(diaryModel, this);
 		
 		Text titleText = new Text("Diary");
+		TextArea textArea = new TextArea();
+	textArea.getStyle().set("minHeight", "350px");
+	textArea.getStyle().set("minWidth", "450px");
+	textArea.setPlaceholder("Please write down the events that you experienced today"); 
+		
+	add(titleText, textArea);
 		 
-		add(titleText);
-		add(addCreateDiaryTextArea());
 		add(createButton("Save"));
 		
 		userInput.setReadOnly(true);
 		add(userInput);
 	}
 	
-	private TextArea addCreateDiaryTextArea() {
-	TextArea textArea = new TextArea();
-	textArea.getStyle().set("minHeight", "350px");
-	textArea.getStyle().set("minWidth", "450px");
-	textArea.setPlaceholder("Please write down the events that you experienced today");
-	diariestext.add(textArea);
-	return textArea;
-	
-	/** saveButton.addClickListener(e -> {
-		Text newEntry = new Text("");
-		newEntry.setText(textArea.getValue());
-		String textPattern = String.format("Tagebucheintrag vom %s: ", LocalDate.now().toString());
-		Div diaryEntryDiv = new Div(new Text(textPattern), newEntry);
-		add(diaryEntryDiv);
-	}); */
-}
-
-	private Button createButton(String label) {		 
-		return new Button(label, event -> {
+	private Button createButton(String label) {			
+		return new Button(label, event -> {			
 			for (IDiaryViewListener listener : listeners) {
-				listener.buttonClick(diariestext);					
+				listener.buttonClick(textArea.getValue());					
 			}
 		});
 	}	
