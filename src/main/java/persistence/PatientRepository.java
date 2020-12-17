@@ -7,7 +7,9 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+import model.common.Doctor;
 import model.common.Patient;
+import model.common.Person;
 
 /**
  * Repository provides database functions for patient data.
@@ -58,6 +60,20 @@ public class PatientRepository {
 	}
 
 	public void removePatient(int id) {
+		EntityTransaction et = null;
+		Patient pat = new Patient();
+
+		try {
+			et = em.getTransaction();
+			et.begin();
+			pat = em.find(Patient.class, id);
+			em.remove(pat);
+			em.persist(pat);
+			et.commit();
+
+		}catch (NoResultException exception){
+			exception.printStackTrace();
+		}
 
 	}
 }
