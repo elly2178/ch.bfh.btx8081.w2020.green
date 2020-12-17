@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "diaries")
+@Table
 public class Diary implements Serializable {
 
     @Id
@@ -18,7 +18,7 @@ public class Diary implements Serializable {
     @ManyToOne
     public List<String> diariestext = new ArrayList<>();
 
-    @Column(name = "entries")
+    @Column
     private String dailyEntry;
 
     @Temporal(TemporalType.TIMESTAMP)
