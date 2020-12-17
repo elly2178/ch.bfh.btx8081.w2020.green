@@ -36,6 +36,10 @@ public class PatientRepository {
 		em.close();
 	}
 
+	/**
+	 * Gets the specific patient
+	 * @param id key
+	 */
 	public void getPatient(int id) {
 		try {
 			String query = "SELECT p FROM Patient p WHERE p.id = :patID";
@@ -50,6 +54,10 @@ public class PatientRepository {
 		}
 	}
 
+	/**
+	 * Returns the lists of all patients
+	 * @return all patients
+	 */
 	public List<Patient> getPatients() {
 		TypedQuery<Patient> tq = em.createQuery("SELECT p FROM Patient p", Patient.class);
 		List<Patient> pats = tq.getResultList();
@@ -59,6 +67,10 @@ public class PatientRepository {
 		return pats;
 	}
 
+	/**
+	 * Removes the specific patient from the DB
+	 * @param id key
+	 */
 	public void removePatient(int id) {
 		EntityTransaction et = null;
 		Patient pat = new Patient();
