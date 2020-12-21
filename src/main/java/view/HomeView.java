@@ -14,7 +14,7 @@ import core.Role;
  * Home page after successful login.
  */
 @Route(value = "home")
-public class HomeView extends VerticalLayout implements RouterLayout {
+public abstract class HomeView extends VerticalLayout implements RouterLayout {
 	private static final long serialVersionUID = -2515746681908568218L;
 
 	public HomeView() {
@@ -25,8 +25,10 @@ public class HomeView extends VerticalLayout implements RouterLayout {
 //			return;
 //		}
 //		addMenuBar(role);
-	}
 
+		setAlignItems(Alignment.CENTER);
+		setJustifyContentMode(JustifyContentMode.CENTER);
+	}
 	private void addMenuBar(Role role) {
 		MenuBar menuBar = new MenuBar();
 		menuBar.setOpenOnHover(true);

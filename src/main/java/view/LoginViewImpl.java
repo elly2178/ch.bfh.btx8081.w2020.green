@@ -15,7 +15,10 @@ public class LoginViewImpl extends VerticalLayout implements LoginView {
 	private LoginForm loginFormComponent;
 
 	public LoginViewImpl() {
+		setAlignItems(Alignment.CENTER);
+		setJustifyContentMode(JustifyContentMode.CENTER);
 		addLoginForm();
+
 	}
 
 	private void addLoginForm() {

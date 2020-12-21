@@ -6,9 +6,9 @@
 
   <persistence-unit name="jimen1" transaction-type="RESOURCE_LOCAL">
 
-    <class>model.Doctor</class>
-    <class>model.Diary</class>
-    <class>model.Patient</class>
+    <class>model.common.Doctor</class>
+    <class>model.common.Diary</class>
+    <class>model.common.Patient</class>
     <class>model.YbocsModel</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
