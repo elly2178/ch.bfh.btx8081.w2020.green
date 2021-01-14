@@ -51,7 +51,8 @@ public class MoodTestImpl extends VerticalLayout implements IMoodTestView{
 	}
 
 	  private RadioButtonGroup<Integer> createRadioButtonGroup(String label){
-		RadioButtonGroup<Integer> someRadioButtonGroup = new RadioButtonGroup<Integer>();
+		RadioButtonGroup<Integer> someRadioButtonGroup = 
+								new RadioButtonGroup<Integer>();
 		moodButtonGroups.add(someRadioButtonGroup);
 		someRadioButtonGroup.setLabel(label);
 		someRadioButtonGroup.setItems(0,1,2,3,4);

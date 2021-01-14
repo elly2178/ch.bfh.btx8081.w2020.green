@@ -14,4 +14,6 @@ public interface IDiaryView {
 	
 	public void addDiaryListener(IDiaryViewListener listener);
 	public void showNotification(String notification);
+	public void purgeTextArea(TextArea someTextArea);
+	public TextArea getTextArea();
 }

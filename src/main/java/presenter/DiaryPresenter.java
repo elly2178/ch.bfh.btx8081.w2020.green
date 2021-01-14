@@ -21,13 +21,11 @@ public class DiaryPresenter implements IDiaryView.IDiaryViewListener {
 
 	@Override
 	public void buttonClick(String diariestext) {
-		 
 		model.setDailyEntry(diariestext);
-		// String textPattern = String.format("Diary input from %s",
-		// LocalDate.now().toString());
-		// view.showNotification(textPattern);
-
+		view.showNotification("New entry added.");
+		//view.purgeTextArea(view.getTextArea());
+		//String textPattern = String.format("Diary input from %s",
+		 //LocalDate.now().toString());
 		view.setUserInput(model.getDailyEntry());
-
 	}
 }
