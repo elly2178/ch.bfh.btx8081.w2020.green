@@ -66,17 +66,13 @@ public class DiaryViewImpl extends VerticalLayout implements IDiaryView {
 
 	@Override
 	public void purgeTextArea(TextArea someTextArea) {
-		textArea.setValue("");
-	}
-	
-	@Override
-	public TextArea getTextArea() {
-		return textArea;
+		textArea.setValue(value);
 	}
 	
 	@Override
 	public void setUserInput(String display) {
 		userInput.setValue(display);
+		
 	}
 
 	@Override
