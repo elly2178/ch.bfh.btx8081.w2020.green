@@ -1,21 +1,20 @@
 package view;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 
 /**
- * view
- * @author ADEK
- *
+ * View interface for the ybocs test
  */
 public interface IYbocsTestView {
 	
 	public void setDisplay(String displayString);
 	
 	interface IYbocsTestViewListener{
-		void buttonClick(String operation);
-		void buttonClick(ArrayList<RadioButtonGroup<Integer>> buttongroups);
+		 
+		void buttonClick(List<RadioButtonGroup<Integer>> buttongroups);
 	}
 	public void addYbocsListener(IYbocsTestViewListener listener);
 	

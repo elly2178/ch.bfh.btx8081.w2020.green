@@ -1,8 +1,6 @@
 package model;
 /**
- * model
- * @author ADEK
- *
+ * Model for the ybocs test
  */
 public class YbocsModel {
 	private int ybocsScore;
@@ -20,7 +18,7 @@ public class YbocsModel {
 	}
 
 	public void addition(int arg) {
-		ybocsScore = ybocsScore + arg;	
+		ybocsScore = ybocsScore + arg;		
 	}
 
 }

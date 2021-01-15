@@ -1,6 +1,7 @@
 package view;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
@@ -15,16 +16,17 @@ import presenter.YbocsPresenter;
 import view.common.MainLayout;
 
 /**
- * vaadin
- * 
- * @author ADEK
- *
+ * ybocstest view implementation. Here are the Vaadin components defined
  */
 @Route(value = "ybocstest", layout = MainLayout.class)
 public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
-
-	private ArrayList<IYbocsTestViewListener> listeners = new ArrayList<IYbocsTestViewListener>();
-	private ArrayList<RadioButtonGroup<Integer>> ybocsButtonGroups = new ArrayList<RadioButtonGroup<Integer>>();
+	/**
+	 * @listeners: Arraylist with all listeners for the Moodtests 
+	 * @moodButtonGroups: saves the input for a specific radio button
+	 * @display: shows the calculated Mood of the User
+	 */
+	private List<IYbocsTestViewListener> listeners = new ArrayList<IYbocsTestViewListener>();
+	private List<RadioButtonGroup<Integer>> ybocsButtonGroups = new ArrayList<RadioButtonGroup<Integer>>();
 
 	private TextField displayField = new TextField();
 
@@ -35,7 +37,15 @@ public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 		Text titleText = new Text("Yale Brown OCD Scale");
 		Text descriptionText = new Text("Please answer the following questions.");
 		add(titleText, descriptionText);
-
+		
+		/**
+		 * calling add method from Vaadin to call the another Method for creating a Radio Button Group 
+		 * with a specific label
+		 * 
+		 * a new legend was created for each radio group. this could not be auto-generated because the
+		 * numerical values always change (somethimes 0 is none, other times 0 is Always)
+		 * 
+		 */
 		add(createRadioButtonGroup("How much time do you spend on obsessive thoughts?"));
 		Text legend1 = new Text("0 = None, 1 = 0-1 hrs/day, 2 = 1-3 hrs/day, 3 = 3-8 hrs/day, 4 = More than 8 hrs/day");
 		add(legend1);
@@ -91,7 +101,12 @@ public class YbocsTestImpl extends VerticalLayout implements IYbocsTestView {
 		add(displayField);
 		add(createButton("Calculate score"));
 	}
-
+	
+	/**
+	 * Method created so that every time its called it will create a radiobutton group with a specific label
+	 * @setItems: creates the scale for the ybocs scale  
+	 * 
+	 */
 	private RadioButtonGroup<Integer> createRadioButtonGroup(String label) {
 		RadioButtonGroup<Integer> someRadioButtonGroup = new RadioButtonGroup<Integer>();
 		ybocsButtonGroups.add(someRadioButtonGroup);

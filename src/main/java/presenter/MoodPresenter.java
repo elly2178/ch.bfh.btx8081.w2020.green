@@ -1,6 +1,7 @@
 package presenter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 
@@ -20,7 +21,7 @@ public class MoodPresenter implements IMoodTestView.IMoodTestViewListener{
 	}
 
 
-	public void buttonClick(ArrayList<RadioButtonGroup<Integer>> buttongroups) {
+	public void buttonClick(List<RadioButtonGroup<Integer>> buttongroups) {
 		model.setMoodScore(0);
 		boolean choice_unset = false;
 		for (RadioButtonGroup<Integer> buttonGroup : buttongroups) {
