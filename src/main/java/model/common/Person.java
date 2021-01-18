@@ -2,18 +2,14 @@ package model.common;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Basic abstract class representing any kind of person.
  */
 @Entity
-@Table(name = "persons")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table
 public abstract class Person {
 
 	@Id

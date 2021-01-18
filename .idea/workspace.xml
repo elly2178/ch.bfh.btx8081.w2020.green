@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Updated the DBManager">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Centered Components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HomeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginViewImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginViewImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Person.java" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -306,7 +304,14 @@
       <workItem from="1608195910099" duration="15026000" />
       <workItem from="1608463713798" duration="336000" />
       <workItem from="1608464209476" duration="81000" />
-      <workItem from="1608539315425" duration="1161000" />
+      <workItem from="1608539315425" duration="1456000" />
+      <workItem from="1610445858846" duration="22000" />
+      <workItem from="1610445996031" duration="611000" />
+      <workItem from="1610542868473" duration="224000" />
+      <workItem from="1610697215676" duration="132000" />
+      <workItem from="1610703332212" duration="2557000" />
+      <workItem from="1610807272472" duration="127000" />
+      <workItem from="1610974973593" duration="2010000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -560,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608209876702</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Centered Components">
+      <created>1608540577081</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1608540577081</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +601,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit Test" />
     <MESSAGE value="Second Storyboard from Alex is done." />
     <MESSAGE value="Restore" />
     <MESSAGE value="Protocol for 20201026 added." />
@@ -614,7 +625,8 @@
     <MESSAGE value="updated DoctorRepository code" />
     <MESSAGE value="updated PatientRepository code with removePatient" />
     <MESSAGE value="Updated the DBManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the DBManager" />
+    <MESSAGE value="Centered Components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Centered Components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
