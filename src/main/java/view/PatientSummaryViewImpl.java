@@ -31,6 +31,10 @@ import com.vaadin.flow.router.Route;
 import model.common.Patient;
 import view.common.MainLayout;
 
+/**
+ * View class of the patient overview and the pop-up to add a new patient.
+ */
+
 @Route(value = "patientSummary", layout = MainLayout.class)
 public class PatientSummaryViewImpl extends VerticalLayout implements PatientSummaryView {
 	
@@ -55,14 +59,14 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        setSizeFull();
 	        ListDataProvider<Patient> dataProvider = createDataProvider();
 	        Crud<Patient> crud = new Crud<>(Patient.class, createGrid(), createPatientEditor());
-	        crud.setMaxWidth("800px");
+	        crud.setMaxWidth("1000px");
 	        crud.setWidth("100%");
 	        crud.setDataProvider(dataProvider);
 	        setHorizontalComponentAlignment(Alignment.CENTER, crud);
 	        
 	        CrudI18n customI18n = CrudI18n.createDefault();
-	        customI18n.setEditItem("Update Patient");
-	        customI18n.setNewItem("Add new Patient");
+	        customI18n.setEditItem("Update patient");
+	        customI18n.setNewItem("Add new patient");
 	        crud.setI18n(customI18n);
 	        
 	        crud.addSaveListener(e -> listeners.forEach(event -> event.onComponentEvent(e)));
@@ -110,6 +114,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 
 	    private Grid<Patient> createGrid() {
 	        Grid<Patient> grid = new Grid<>();
+	        grid.addColumn(c -> c.getPatientId()).setHeader("Patient ID");
 	        grid.addColumn(c -> c.getFirstName()).setHeader("First name");
 	        grid.addColumn(c -> c.getSecondName()).setHeader("Last name");
 	        grid.addColumn(c -> c.isGender()).setHeader("Gender");
@@ -136,10 +141,11 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        gender.setRequiredIndicatorVisible(true);
 	        gender.setLabel("Gender");
 	        setColspan(gender, 2);
-	        gender.setItems("f", "m", "o");
+	        gender.setItems("female", "male", "other");
 	        
 	        DatePicker birthDate = new DatePicker("Date of birth");
 	        birthDate.setRequiredIndicatorVisible(true);
+	        //birthDate.setMaxDate("getDate");
 	        setColspan(birthDate, 2);
 	        
 	        EmailField email = new EmailField("E-mail");
@@ -161,9 +167,22 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        TextField phone = new TextField("Phone");
 	        setColspan(phone, 2);
 	        phone.setRequiredIndicatorVisible(true);
+	        
+	        ComboBox<String> patientInsurance = new ComboBox<>();
+	        patientInsurance.setAllowCustomValue(true);
+	        patientInsurance.setRequiredIndicatorVisible(true);
+	        patientInsurance.setLabel("Health Insurance");
+	        setColspan(patientInsurance, 2);
+	        patientInsurance.setItems("Assura", "Atupri", "Concordia", "Groupe Mutuel", "Helsana", "Sanitas", "Swica", "Visana", "other");
+	        
+	        TextField patientInsuranceId = new TextField("Patient Insurance ID");
+	        setColspan(patientInsuranceId, 2);
+	        patientInsuranceId.setRequiredIndicatorVisible(true);
+	        
+	        
 
 	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email,
-	                address, city, zip, country, phone);
+	                address, city, zip, country, phone, patientInsurance, patientInsuranceId);
 	        form.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 4));
 
 	        Binder<Patient> binder = new Binder<>(Patient.class);
@@ -177,6 +196,9 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        //binder.bind(postalCode, Address::getZip, Address::setZip);
 	        //binder.bind(country, Address::getCountry, Address::setCountry);
 	        binder.bind(phone, Patient::getPhone, Patient::setPhone);
+	        binder.bind(patientInsurance, Patient::getPatientInsurance, Patient::setPatientInsurance);
+	        binder.bind(patientInsuranceId, Patient::getPatientInsuranceId, Patient::setPatientInsuranceId);
+	        
 	        
 	        // First name, last name, date of birth and gender are required fields
 	        binder.forField(firstName)
@@ -195,6 +217,10 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        Binding<Patient, String> emailBinding = binder.forField(email)
 	                .withValidator(new EmailValidator("Incorrect email address"))
 	                .bind(Patient::getEmail, Patient::setEmail);
+	        
+	        // Date of birth (date only in the past allowed)
+	        //binder.forField(birthDate)
+	       
 
 	        return new BinderCrudEditor<>(binder, form);
 	        

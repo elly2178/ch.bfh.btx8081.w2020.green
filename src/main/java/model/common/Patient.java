@@ -19,20 +19,52 @@ public class Patient extends Person implements Serializable {
 	@OneToMany
 	private List<String> diaries = new ArrayList<>();
 
+	int patientId;
+	String patientInsurance;
+	String patientInsuranceId;
 	int ybocs;
 	int mood;
 	int combined = ybocs + mood;
 	LocalDate birthDate = LocalDate.of(1989, 05, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
 
-	public Patient(String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
-			String phone) {
+	public Patient(int patientId, String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
+			String phone, String patientInsurance, String patientInsuranceId) {
 		super(firstName, secondName, birthDate, gender, address, email, phone);
 	}
 
 	public Patient() {
 
 	}
+	
+	// Patient ID
+	public int getPatientId() {
+		return patientId;
+	}
+
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
+	}
+	
+	// Patient health insurance
+	public String getPatientInsurance() {
+		return patientInsurance;
+	}
+
+	public void setPatientInsurance(String patientInsurance) {
+		this.patientInsurance = patientInsurance;
+	}
+	
+	// Patient Insurance ID
+	public String getPatientInsuranceId() {
+		return patientInsuranceId;
+	}
+
+	public void setPatientInsuranceId(String patientInsuranceId) {
+		this.patientInsuranceId = patientInsuranceId;
+	}
+	
+	
 
 	// calculateAVr score
 	public float calculateAvarageScore() {
@@ -65,4 +97,7 @@ public class Patient extends Person implements Serializable {
 				", dateToday=" + dateToday +
 				'}';
 	}
+
+
+	
 }

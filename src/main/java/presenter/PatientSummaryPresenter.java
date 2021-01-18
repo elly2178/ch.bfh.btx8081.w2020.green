@@ -7,7 +7,7 @@ import model.common.Patient;
 import view.PatientSummaryView;
 
 /**
- * Presenter class links the view and the model.
+ * Presenter class links the view and the model of the patient.
  */
 public class PatientSummaryPresenter
 		implements PatientSummaryView.PatientSummarySaveListener { //, PatientSummaryView.PatientSummaryDeleteListener {
