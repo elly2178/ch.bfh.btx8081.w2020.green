@@ -5,10 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "patients")
@@ -19,6 +16,9 @@ public class Patient extends Person implements Serializable {
 	@OneToMany
 	private List<String> diaries = new ArrayList<>();
 
+
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	int patientId;
 	String patientInsurance;
 	String patientInsuranceId;

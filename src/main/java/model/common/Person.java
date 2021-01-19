@@ -32,7 +32,7 @@ public abstract class Person {
 
 	public Person(String firstName, String secondName, String birthDate, String gender, Address address, String email,
 			String phone) {
-		this.firstName = firstName;
+		this.firstName = firstName;/**/
 		this.secondName = secondName;
 		this.birthDate = birthDate;
 		this.gender = gender;

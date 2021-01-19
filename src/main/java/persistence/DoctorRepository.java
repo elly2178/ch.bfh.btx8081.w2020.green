@@ -20,26 +20,11 @@ public class DoctorRepository {
     /**
      *  Method adds a Doctor to the Database
      */
-    public static void addDoctor(int id, String title, String firstName, String secondName, String location, String phone, String email, String gender){
-        EntityTransaction et = null;
-        try {
-            et = em.getTransaction();
-            et.begin();
-            Doctor doc = new Doctor();
-            doc.setTitle(title);
-            doc.setFirstName(firstName);
-            doc.setSecondName(secondName);
-            doc.setLocation(location);
-            doc.setPhone(phone);
-            doc.setEmail(email);
-            doc.setGender(gender);
-            em.persist(doc);
-            et.commit();
-        } catch (Exception ex){
-            if(et != null){
-                et.rollback();
-            }
-        }
+    public static void addDoctor(Doctor doctor){
+        em.getTransaction().begin();
+        em.persist(doctor);
+        em.getTransaction().commit();
+        em.close();
     }
 
     /**

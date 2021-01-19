@@ -12,6 +12,8 @@ import java.util.List;
 @Table
 public class Diary implements Serializable {
 
+
+
     @Id
     private String id;
 
