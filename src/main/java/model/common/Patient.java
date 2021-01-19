@@ -13,6 +13,9 @@ public class Patient extends Person implements Serializable {
 
 	@Column
 	private String healthInsuranceName;
+	@Column
+	private String patientInsuranceId;
+	
 	@OneToMany
 	private List<String> diaries = new ArrayList<>();
 
@@ -21,7 +24,7 @@ public class Patient extends Person implements Serializable {
 	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	int patientId;
 	String patientInsurance;
-	String patientInsuranceId;
+	//String patientInsuranceId;
 	int ybocs;
 	int mood;
 	int combined = ybocs + mood;
@@ -96,6 +99,7 @@ public class Patient extends Person implements Serializable {
 				", birthDate=" + birthDate +
 				", dateToday=" + dateToday +
 				'}';
+
 	}
 
 

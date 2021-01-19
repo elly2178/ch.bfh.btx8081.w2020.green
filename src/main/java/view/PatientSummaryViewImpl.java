@@ -46,20 +46,6 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	private List<PatientSummarySaveListener> listeners = new ArrayList<>();
 	private Crud<Patient> crud;
 	
-	/**
-	 * 
-	private static final long serialVersionUID = 1L;
-	TextField filterText = new TextField();
-	Button button = new Button("Click me", event -> Notification.show("Clicked!"));
-	public PatientSummaryView() {
-		List<Patient> PatientList = new ArrayList<>();
-		Grid<Patient> grid = new Grid<>(Patient.class);	
-		grid.setItems(PatientList);
-		grid.setColumns("First Name", "Second Name");
-		add(button, filterText, grid);
-		}	
-	 */
-	
 	 public PatientSummaryViewImpl() {
 	        setSizeFull();
 	        ListDataProvider<Patient> dataProvider = createDataProvider();
