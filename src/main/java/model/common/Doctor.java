@@ -26,7 +26,7 @@ public class Doctor extends Person implements Serializable {
 	@OneToMany
 	private List<Patient> patients;
 
-	public Doctor(String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
+	public Doctor(String firstName, String secondName, String birthDate, String gender, Address address, String email,
 			String phone, String title) {
 		super(firstName, secondName, birthDate, gender, address, email, phone);
 		this.title = title;

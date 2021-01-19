@@ -20,9 +20,9 @@ public abstract class Person {
 	@Column
 	private String secondName;
 	@Column
-	private LocalDate birthDate;
+	private String birthDate;
 	@Column
-	private char gender;
+	private String gender;
 	@Column
 	private String email;
 	@Column
@@ -30,7 +30,7 @@ public abstract class Person {
 	@Column
 	private Address address;
 
-	public Person(String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
+	public Person(String firstName, String secondName, String birthDate, String gender, Address address, String email,
 			String phone) {
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -61,19 +61,19 @@ public abstract class Person {
 		this.secondName = secondName;
 	}
 
-	public LocalDate getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(LocalDate birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
-	public char isGender() {
+	public String isGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 

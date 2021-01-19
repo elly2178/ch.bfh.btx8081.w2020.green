@@ -1,5 +1,6 @@
 package view;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -7,11 +8,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HasValue;
+import com.vaadin.flow.component.charts.model.Label;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.crud.BinderCrudEditor;
 import com.vaadin.flow.component.crud.Crud;
 import com.vaadin.flow.component.crud.CrudEditor;
 import com.vaadin.flow.component.crud.CrudI18n;
+import com.vaadin.flow.component.crud.CrudVariant;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.Grid;
@@ -28,6 +32,7 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.function.SerializablePredicate;
 import com.vaadin.flow.router.Route;
 
+import model.common.Address;
 import model.common.Patient;
 import view.common.MainLayout;
 
@@ -63,6 +68,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        crud.setWidth("100%");
 	        crud.setDataProvider(dataProvider);
 	        setHorizontalComponentAlignment(Alignment.CENTER, crud);
+	        
 	        
 	        CrudI18n customI18n = CrudI18n.createDefault();
 	        customI18n.setEditItem("Update patient");
@@ -103,11 +109,12 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 
 	    private ListDataProvider<Patient> createDataProvider() {
 	        List<Patient> data = new ArrayList<>();
-	        //data.add(new Patient("Tim", "Frazier", "15.02.1996", "m", "3000", "Bernstrasse 54", "Bern", "Switzerland", "tim.frz@gmail.com", "(972) 924-7669"));
-	        //data.add(new Patient("Fallen", "Myrfors", "15.02.1986", "m", "3000", "Gurnigelweg 1","Gurnigel", "Switzerland", "F.myrfors@gmail.com", "(972) 924-7669"));
-	        //data.add(new Patient("Brian", "Snøddy", "15.02.1999", "m", "3000", "Burgdorfstrasse 88", "Burgdorf", "Switzerland", "brians1@gmail.com", "(972) 924-7669")); 
-	        //data.add(new Patient("Susan", "Van Camp", "15.02.1977", "f", "3000", "Thunstrasse 2", "Thun", "Switzerland", "susan19@gmail.com", "(972) 924-7669"));
-	        //data.add(new Patient("Liz", "Danforth", "15.02.1992", "f", "3000", "Bahstrasse 23", "Biel", "Switzerland", "lizd@hotmail.com", "(972) 924-7669"));
+	        //data.add(new Patient());
+	        data.add(new Patient(10, "Tim", "Frazier", "01.09.1996", "male", new Address(3000, "Bernstrasse 54", "Bern", "Schweiz"), "tim.frz@gmail.com", "972 9247669", "Helsana", "4653"));
+	        data.add(new Patient(11, "Fallen", "Myrfors", "15.11.1986", "male", new Address(3021, "Gurnigelweg 1","Gurnigel", "Schweiz"), "F.myrfors@gmail.com", "031 9244469", "Atupri", "1290"));
+	        data.add(new Patient(12, "Brian", "Snøddy", "18.05.1999", "male", new Address(3099, "Burgdorfstrasse 88", "Burgdorf", "Schweiz"), "brians1@gmail.com", "032 9247611", "Swica", "993")); 
+	        data.add(new Patient(13, "Susan", "Van Camp", "12.12.1977", "female", new Address(3123, "Thunstrasse 2", "Thun", "Schweiz"), "susan19@gmail.com", "044 9243369", "Assura", "2345"));
+	        data.add(new Patient(14, "Liz", "Danforth", "15.02.1992", "female", new Address(3001, "Bahnstrasse 23", "Biel", "Schweiz"), "lizd@hotmail.com", "032 9247611", "Concordia", "9583"));
 
 	        return new ListDataProvider<>(data);
 	    }
@@ -127,15 +134,16 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	    
 	    // Add a new patient
 	    private CrudEditor<Patient> createPatientEditor() {
-	        TextField firstName = new TextField("First name");
+	        	
+	    	TextField pers = new TextField("First name");
+	    	TextField firstName = new TextField("First name");
 	        firstName.setRequiredIndicatorVisible(true);
 	        setColspan(firstName, 2);
 	        
 	        TextField secondName = new TextField("Last name");
 	        secondName.setRequiredIndicatorVisible(true);
 	        setColspan(secondName, 2);
-	       
-	        
+	       	        
 	        ComboBox<String> gender = new ComboBox<>();
 	        gender.setAllowCustomValue(true);
 	        gender.setRequiredIndicatorVisible(true);
@@ -152,8 +160,8 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        setColspan(email, 2);
 	        email.setRequiredIndicatorVisible(true);
 
-	        TextField address = new TextField("Street and number");
-	        setColspan(address, 2);
+	        TextField street = new TextField("Street and number");
+	        setColspan(street, 2);
 
 	        TextField city = new TextField("City");
 	        NumberField zip = new NumberField("Postal code");
@@ -181,15 +189,16 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        
 	        
 
-	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email,
-	                address, city, zip, country, phone, patientInsurance, patientInsuranceId);
+	        FormLayout form = new FormLayout(pers, firstName, secondName, gender, birthDate, email,
+	                street, city, zip, country, phone, patientInsurance, patientInsuranceId);
 	        form.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 4));
 
 	        Binder<Patient> binder = new Binder<>(Patient.class);
+	        //binder.bind(patientId, Patient::getPatientId, Patient::setPatientId);
 	        binder.bind(firstName, Patient::getFirstName, Patient::setFirstName);
 	        binder.bind(secondName, Patient::getSecondName, Patient::setSecondName);
 	        //binder.bind(gender, Patient::getGender, Patient::isGender);
-	        binder.bind(birthDate, Patient::getBirthDate, Patient::setBirthDate);
+	        //binder.bind(birthDate, Patient::getBirthDate, Patient::setBirthDate);
 	        binder.bind(email, Patient::getEmail, Patient::setEmail);
 	        //binder.bind(street, Address::getStreet, Address::setStreet);
 	        //binder.bind(city, Address::getCity, Address::setCity);
@@ -205,13 +214,16 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	                .withValidator(new StringLengthValidator(
 	                        "Please add the first name", 1, null))
 	                .bind(Patient::getFirstName, Patient::setFirstName);
+	        
 	        binder.forField(secondName)
 	                .withValidator(new StringLengthValidator(
 	                        "Please add the last name", 1, null))
 	                .bind(Patient::getSecondName, Patient::setSecondName);
+
 	        
 	        SerializablePredicate<String> phoneOrEmailPredicate = value -> 
 	        	!email.getValue().trim().isEmpty();
+	        	
 	        
 	        // E-mail and phone have specific validators
 	        Binding<Patient, String> emailBinding = binder.forField(email)

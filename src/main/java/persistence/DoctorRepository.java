@@ -20,7 +20,7 @@ public class DoctorRepository {
     /**
      *  Method adds a Doctor to the Database
      */
-    public static void addDoctor(int id, String title, String firstName, String secondName, String location, String phone, String email, char gender){
+    public static void addDoctor(int id, String title, String firstName, String secondName, String location, String phone, String email, String gender){
         EntityTransaction et = null;
         try {
             et = em.getTransaction();

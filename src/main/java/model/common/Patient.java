@@ -28,7 +28,7 @@ public class Patient extends Person implements Serializable {
 	LocalDate birthDate = LocalDate.of(1989, 05, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
 
-	public Patient(int patientId, String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
+	public Patient(int patientId, String firstName, String secondName, String birthDate, String gender, Address address, String email,
 			String phone, String patientInsurance, String patientInsuranceId) {
 		super(firstName, secondName, birthDate, gender, address, email, phone);
 	}
@@ -42,9 +42,9 @@ public class Patient extends Person implements Serializable {
 		return patientId;
 	}
 
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
-	}
+	//public void setPatientId(int patientId) {
+		//this.patientId = patientId;
+	//}
 	
 	// Patient health insurance
 	public String getPatientInsurance() {
