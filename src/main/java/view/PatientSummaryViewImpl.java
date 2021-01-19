@@ -84,21 +84,8 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	                dataProvider.getItems().add(toSave);
 	           }
 	        });
-	        /*
-	        toSave.addClickListener(event -> {
-	            if (binder.writeBeanIfValid(contactBeingEdited)) {
-	                infoLabel.setText("Saved bean values: " + contactBeingEdited);
-	            } else {
-	                BinderValidationStatus<Contact> validate = binder.validate();
-	                String errorText = validate.getFieldValidationStatuses()
-	                        .stream().filter(BindingValidationStatus::isError)
-	                        .map(BindingValidationStatus::getMessage)
-	                        .map(Optional::get).distinct()
-	                        .collect(Collectors.joining(", "));
-	                infoLabel.setText("There are errors: " + errorText);
-	            }
-	        });
-			*/
+	      
+
 	        crud.addDeleteListener(deleteEvent -> {
 	            // Delete the item in the database
 	            dataProvider.getItems().remove(deleteEvent.getItem());
@@ -110,7 +97,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	    private ListDataProvider<Patient> createDataProvider() {
 	        List<Patient> data = new ArrayList<>();
 	        //data.add(new Patient());
-	        data.add(new Patient(10, "Tim", "Frazier", "01.09.1996", "male", new Address(3000, "Bernstrasse 54", "Bern", "Schweiz"), "tim.frz@gmail.com", "972 9247669", "Helsana", "4653"));
+	        data.add(new Patient(10, "Tim", "Frazier", "01.09.1996", "male", new Address(3000, "Bernstrasse 54", "Bern", "Schweiz"), "tim.frz@gmail.com", "972 9247669", "Concordia", "4653"));
 	        data.add(new Patient(11, "Fallen", "Myrfors", "15.11.1986", "male", new Address(3021, "Gurnigelweg 1","Gurnigel", "Schweiz"), "F.myrfors@gmail.com", "031 9244469", "Atupri", "1290"));
 	        data.add(new Patient(12, "Brian", "Snøddy", "18.05.1999", "male", new Address(3099, "Burgdorfstrasse 88", "Burgdorf", "Schweiz"), "brians1@gmail.com", "032 9247611", "Swica", "993")); 
 	        data.add(new Patient(13, "Susan", "Van Camp", "12.12.1977", "female", new Address(3123, "Thunstrasse 2", "Thun", "Schweiz"), "susan19@gmail.com", "044 9243369", "Assura", "2345"));
