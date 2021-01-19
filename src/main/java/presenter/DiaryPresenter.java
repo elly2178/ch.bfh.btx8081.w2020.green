@@ -2,15 +2,21 @@ package presenter;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import com.vaadin.flow.component.textfield.TextArea;
+import com.vaadin.flow.data.renderer.LocalDateRenderer;
+import com.vaadin.flow.internal.AnnotationReader;
 
 import model.common.Diary;
+import persistence.DiaryRepository;
 import view.IDiaryView;
 
 public class DiaryPresenter implements IDiaryView.IDiaryViewListener {
 	private Diary model;
 	private IDiaryView view;
+	private DiaryRepository persistanceDiary;
 
 	public DiaryPresenter(Diary model, IDiaryView view) {
 		this.model = model;
@@ -19,13 +25,16 @@ public class DiaryPresenter implements IDiaryView.IDiaryViewListener {
 		view.addDiaryListener(this);
 	}
 
-	@Override
 	public void buttonClick(String diariestext) {
 		model.setDailyEntry(diariestext);
 		view.showNotification("New entry added.");
-		//view.purgeTextArea(view.getTextArea());
-		//String textPattern = String.format("Diary input from %s",
-		 //LocalDate.now().toString());
+	 
 		view.setUserInput(model.getDailyEntry());
+		String idString = null;
+		LocalDate creationDate = null;
+		 
+		Diary diary = new Diary(LocalDate.now().toString(), creationDate, idString , diariestext);
+		persistanceDiary.addDiary(diary);
+		 
 	}
 }

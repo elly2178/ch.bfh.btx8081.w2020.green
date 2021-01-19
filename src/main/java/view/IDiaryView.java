@@ -1,6 +1,7 @@
 package view;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.vaadin.flow.component.textfield.TextArea;
 /**

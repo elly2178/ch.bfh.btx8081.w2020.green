@@ -16,20 +16,22 @@ public class Diary implements Serializable {
     private String id;
 
     @ManyToOne
-    public List<String> diariestext = new ArrayList<>();
+    public String diariestext;
 
     @Column
     private String dailyEntry;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date creationDate;
+    private LocalDate creationDate;
 
     public Diary() {
     
     }
-    public Diary(String dailyEntry, Date creationDate){
+    public Diary(String dailyEntry, LocalDate creationDate, String id, String diariestext){
        this.dailyEntry = dailyEntry;
-        this.creationDate = new Date(creationDate.getTime());
+       this.creationDate = creationDate.now();
+       this.id = id;
+       this.diariestext = diariestext;
     }
 
 	public String getId() {
@@ -48,17 +50,18 @@ public class Diary implements Serializable {
 		this.dailyEntry = diariestext;
 	}
 
-	public Date getCreationDate() {
+	public LocalDate getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
+	public void setCreationDate(LocalDate creationDate) {
+		this.creationDate = creationDate.now();
 	}
+	
 
-    public void addEntry(){
-        diariestext.add(this.dailyEntry);
-    }
+    //public void addEntry(){     
+      //  diariestext.add(this.dailyEntry);
+    //}
 
    
 }
