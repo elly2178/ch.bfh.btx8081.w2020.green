@@ -135,7 +135,6 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	    // Add a new patient
 	    private CrudEditor<Patient> createPatientEditor() {
 	        	
-	    	TextField pers = new TextField("First name");
 	    	TextField firstName = new TextField("First name");
 	        firstName.setRequiredIndicatorVisible(true);
 	        setColspan(firstName, 2);
@@ -189,7 +188,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        
 	        
 
-	        FormLayout form = new FormLayout(pers, firstName, secondName, gender, birthDate, email,
+	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email,
 	                street, city, zip, country, phone, patientInsurance, patientInsuranceId);
 	        form.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 4));
 
