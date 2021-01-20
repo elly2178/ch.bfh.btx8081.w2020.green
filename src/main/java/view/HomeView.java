@@ -19,13 +19,7 @@ public abstract class HomeView extends VerticalLayout implements RouterLayout {
 
 	public HomeView() {
 		add("Willkommen im Leaf Doctors Portal");
-//		Role role = (Role) VaadinSession.getCurrent().getAttribute("role");
-//		if (role == null) {
-//			navigateTo("login");
-//			return;
-//		}
-//		addMenuBar(role);
-
+ 
 		setAlignItems(Alignment.CENTER);
 		setJustifyContentMode(JustifyContentMode.CENTER);
 	}
