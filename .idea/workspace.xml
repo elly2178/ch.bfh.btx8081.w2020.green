@@ -22,8 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added Inheritance Strategy">
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Added Diary commit method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Diary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/common/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/common/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DiaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DiaryRepository.java" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -313,7 +317,8 @@
       <workItem from="1610974973593" duration="2176000" />
       <workItem from="1610984317724" duration="51000" />
       <workItem from="1610985184392" duration="25000" />
-      <workItem from="1611078512712" duration="1311000" />
+      <workItem from="1611078512712" duration="3074000" />
+      <workItem from="1611081730780" duration="314000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -581,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610979526571</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added Diary commit method">
+      <created>1611080092403</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1611080092403</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +622,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Restore" />
     <MESSAGE value="Protocol for 20201026 added." />
     <MESSAGE value="Typo corrections and adjustments." />
     <MESSAGE value="Domain Model Alex" />
@@ -635,7 +646,8 @@
     <MESSAGE value="Updated the DBManager" />
     <MESSAGE value="Centered Components" />
     <MESSAGE value="Added Inheritance Strategy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Inheritance Strategy" />
+    <MESSAGE value="Added Diary commit method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Diary commit method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

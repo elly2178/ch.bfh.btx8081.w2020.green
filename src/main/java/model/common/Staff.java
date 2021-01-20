@@ -13,7 +13,7 @@ public class Staff extends Person {
 	private String certification;
 	private LocalDate joinedDate;
 
-	public Staff(String firstName, String secondName, LocalDate birthDate, char gender, Address address, String email,
+	public Staff(String firstName, String secondName, String birthDate, String gender, Address address, String email,
 			String phone) {
 		super(firstName, secondName, birthDate, gender, address, email, phone);
 		// TODO Auto-generated constructor stub

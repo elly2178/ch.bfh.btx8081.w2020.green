@@ -4,7 +4,6 @@ import model.common.Diary;
 
 import javax.persistence.EntityManager;
 
-//TO BE ALLOCATED PROPERLY
 public class DiaryRepository {
 
     private EntityManager em;
