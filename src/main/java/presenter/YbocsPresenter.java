@@ -16,6 +16,7 @@ import view.YbocsTestImpl;
 public class YbocsPresenter implements IYbocsTestView.IYbocsTestViewListener {
 	private YbocsModel model;
 	private IYbocsTestView view;
+	private int score;
  
 	public YbocsPresenter(YbocsModel model, IYbocsTestView view) {
 		this.model = model;
@@ -34,8 +35,18 @@ public class YbocsPresenter implements IYbocsTestView.IYbocsTestViewListener {
 				choice_unset = true;
 			} else {
 				// add the values of the selected questions
-				model.addition(buttonGroup.getValue());		
+				score = model.addition(buttonGroup.getValue());		
 			}
+		}
+		
+		if (score >= 0 && score <=  15) {
+			view.showNotification("You seem to have Mild OCD.");
+		}else if (score >= 16 && score <=  23){
+			view.showNotification("You seem to have Moderate OCD.");
+		} else if (score >= 24 && score <=  31) {
+			view.showNotification("You seem to have Severe OCD.");
+		}else {
+			view.showNotification("You seem to have Extreme OCD.");
 		}
 		// this will fire if one question is not answered 
 		if (choice_unset == true) {

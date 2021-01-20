@@ -17,8 +17,8 @@ public class YbocsModel {
 		this.ybocsScore = ybocsScore;
 	}
 
-	public void addition(int arg) {
-		ybocsScore = ybocsScore + arg;		
+	public int addition(int arg) {
+		return ybocsScore = ybocsScore + arg;		
 	}
 
 }

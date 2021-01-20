@@ -29,8 +29,8 @@ public class MoodModel {
 		this.moodScore = moodScore;
 	}
 	
-	public void addition(int arg) {
-		moodScore = moodScore + arg;
+	public int addition(int arg) {
+		return moodScore = moodScore + arg;
 	}
 	
 	public String getMoodScoreAsString() {
