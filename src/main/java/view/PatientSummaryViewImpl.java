@@ -82,8 +82,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 
 	    private ListDataProvider<Patient> createDataProvider() {
 	        List<Patient> data = new ArrayList<>();
-	        //data.add(new Patient());
-	        data.add(new Patient(10, "Tim", "Frazier", "01.09.1996", "male", new Address(3000, "Bernstrasse 54", "Bern", "Schweiz"), "tim.frz@gmail.com", "972 9247669", "Concordia", "4653"));
+	        data.add(new Patient(10, "Tim", "Frazier", "01.09.1996", "male", new Address(3000, "Bernstrasse 54", "Bern", "Schweiz"), "tim.frz@gmail.com", "972 9247669", "Helsana", "4653"));
 	        data.add(new Patient(11, "Fallen", "Myrfors", "15.11.1986", "male", new Address(3021, "Gurnigelweg 1","Gurnigel", "Schweiz"), "F.myrfors@gmail.com", "031 9244469", "Atupri", "1290"));
 	        data.add(new Patient(12, "Brian", "Snøddy", "18.05.1999", "male", new Address(3099, "Burgdorfstrasse 88", "Burgdorf", "Schweiz"), "brians1@gmail.com", "032 9247611", "Swica", "993")); 
 	        data.add(new Patient(13, "Susan", "Van Camp", "12.12.1977", "female", new Address(3123, "Thunstrasse 2", "Thun", "Schweiz"), "susan19@gmail.com", "044 9243369", "Assura", "2345"));
@@ -99,7 +98,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        grid.addColumn(c -> c.getSecondName()).setHeader("Last name");
 	        grid.addColumn(c -> c.isGender()).setHeader("Gender");
 	        grid.addColumn(c -> c.getBirthDate()).setHeader("Date of birth");
-	        grid.addColumn(c -> c.getPhone()).setHeader("Phone");
+	        //grid.addColumn(c -> c.getPhone()).setHeader("Phone");
 	        grid.addColumn(c -> c.calculateAvarageScore()).setHeader("Average score");
 	        Crud.addEditColumn(grid);
 	        return grid;
@@ -107,62 +106,64 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	    
 	    // Add a new patient
 	    private CrudEditor<Patient> createPatientEditor() {
-	        	
+	        // Attribute: first name 
 	    	TextField firstName = new TextField("First name");
 	        firstName.setRequiredIndicatorVisible(true);
 	        setColspan(firstName, 2);
-	        
+	        // Attribute: seconde name
 	        TextField secondName = new TextField("Last name");
 	        secondName.setRequiredIndicatorVisible(true);
 	        setColspan(secondName, 2);
-	       	        
+	       	// Attribute: gender
 	        ComboBox<String> gender = new ComboBox<>();
 	        gender.setAllowCustomValue(true);
 	        gender.setRequiredIndicatorVisible(true);
 	        gender.setLabel("Gender");
 	        setColspan(gender, 2);
 	        gender.setItems("female", "male", "other");
-	        
+	        // Attribute: date of birth
 	        DatePicker birthDate = new DatePicker("Date of birth");
 	        birthDate.setRequiredIndicatorVisible(true);
 	        //birthDate.setMaxDate("getDate");
 	        setColspan(birthDate, 2);
-	        
+	        // Attribute: patient's e-mail
 	        EmailField email = new EmailField("E-mail");
 	        setColspan(email, 2);
 	        email.setRequiredIndicatorVisible(true);
-
+	        // Attribute: patient's address (street and number)
 	        TextField street = new TextField("Street and number");
 	        setColspan(street, 2);
-
+	        // Attribute: patient's address (city and postal code)
 	        TextField city = new TextField("City");
+	        city.setRequiredIndicatorVisible(true);
 	        NumberField zip = new NumberField("Postal code");
-
+	        zip.setRequiredIndicatorVisible(true);
+	        // Attribute: patient's address (country)
 	        ComboBox<String> country = new ComboBox<>();
 	        country.setAllowCustomValue(true);
 	        country.setLabel("Country");
 	        setColspan(country, 2);
 	        country.setItems(getCountriesList());
-
+	        // Attribute: phone
 	        TextField phone = new TextField("Phone");
 	        setColspan(phone, 2);
 	        phone.setRequiredIndicatorVisible(true);
-	        
+	        // Attribute: patient insurance
 	        ComboBox<String> patientInsurance = new ComboBox<>();
 	        patientInsurance.setAllowCustomValue(true);
 	        patientInsurance.setRequiredIndicatorVisible(true);
 	        patientInsurance.setLabel("Health Insurance");
 	        setColspan(patientInsurance, 2);
 	        patientInsurance.setItems("Assura", "Atupri", "Concordia", "Groupe Mutuel", "Helsana", "Sanitas", "Swica", "Visana", "other");
-	        
+	        // Attribute: patient insurance ID
 	        TextField patientInsuranceId = new TextField("Patient Insurance ID");
 	        setColspan(patientInsuranceId, 2);
 	        patientInsuranceId.setRequiredIndicatorVisible(true);
 	        
 	        
 
-	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email,
-	                street, city, zip, country, phone, patientInsurance, patientInsuranceId);
+	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email, street, city, zip, country, phone, 
+	        		patientInsurance, patientInsuranceId);
 	        form.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 4));
 
 	        Binder<Patient> binder = new Binder<>(Patient.class);
@@ -191,6 +192,12 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	                .withValidator(new StringLengthValidator(
 	                        "Please add the last name", 1, null))
 	                .bind(Patient::getSecondName, Patient::setSecondName);
+	        
+	        /**binder.forField(birthDate)
+            		.withValidator(new StringLengthValidator(
+            				"Please add the birthdate", 1, null))
+            		.bind(Patient::getBirthDate, Patient::setBirthDate);
+*/
 
 	        
 	        SerializablePredicate<String> phoneOrEmailPredicate = value -> 
@@ -202,10 +209,6 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	                .withValidator(new EmailValidator("Incorrect email address"))
 	                .bind(Patient::getEmail, Patient::setEmail);
 	        
-	        // Date of birth (date only in the past allowed)
-	        //binder.forField(birthDate)
-	       
-
 	        return new BinderCrudEditor<>(binder, form);
 	        
 	    }

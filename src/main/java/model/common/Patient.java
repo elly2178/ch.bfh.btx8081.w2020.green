@@ -15,13 +15,12 @@ public class Patient extends Person implements Serializable {
 	private String healthInsuranceName;
 	@Column
 	private String patientInsuranceId;
-	
 	@OneToMany
 	private List<String> diaries = new ArrayList<>();
 
 
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	int patientId;
 	String patientInsurance;
 	//String patientInsuranceId;
