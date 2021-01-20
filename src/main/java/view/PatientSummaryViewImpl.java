@@ -186,7 +186,7 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        binder.bind(patientInsuranceId, Patient::getPatientInsuranceId, Patient::setPatientInsuranceId);
 	        
 	        
-	        // First name, last name, date of birth and gender are required fields
+	        // First name and last name are required fields
 	        binder.forField(firstName)
 	                .withValidator(new StringLengthValidator(
 	                        "Please add the first name", 1, null))
