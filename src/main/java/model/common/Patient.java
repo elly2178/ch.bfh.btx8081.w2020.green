@@ -27,7 +27,7 @@ public class Patient extends Person implements Serializable {
 	int ybocs;
 	int mood;
 	int combined = ybocs + mood;
-	LocalDate birthDate = LocalDate.of(1989, 05, 18);
+	LocalDate birthDate = LocalDate.of(1977, 03, 18);
 	LocalDate dateToday = java.time.LocalDate.now();
 
 	public Patient(int patientId, String firstName, String secondName, String birthDate, String gender, Address address, String email,
