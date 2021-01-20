@@ -39,20 +39,21 @@ public class YbocsPresenter implements IYbocsTestView.IYbocsTestViewListener {
 			}
 		}
 		
-		if (score >= 0 && score <=  15) {
-			view.showNotification("You seem to have Mild OCD.");
-		}else if (score >= 16 && score <=  23){
-			view.showNotification("You seem to have Moderate OCD.");
-		} else if (score >= 24 && score <=  31) {
-			view.showNotification("You seem to have Severe OCD.");
-		}else {
-			view.showNotification("You seem to have Extreme OCD.");
-		}
+		
 		// this will fire if one question is not answered 
 		if (choice_unset == true) {
 			view.showNotification("Please make sure to make a choice in every Question.");
 		} else {
-			view.setDisplay(model.getYbocsScoreAsString());		
+			view.setDisplay(model.getYbocsScoreAsString());	
+			if (score >= 0 && score <=  15) {
+				view.showNotification("You seem to have Mild OCD.");
+			}else if (score >= 16 && score <=  23){
+				view.showNotification("You seem to have Moderate OCD.");
+			} else if (score >= 24 && score <=  31) {
+				view.showNotification("You seem to have Severe OCD.");
+			}else {
+				view.showNotification("You seem to have Extreme OCD.");
+			}
 		}
 	}
 }

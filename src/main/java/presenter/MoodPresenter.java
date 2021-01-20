@@ -33,19 +33,22 @@ public class MoodPresenter implements IMoodTestView.IMoodTestViewListener{
 			}
 			
 		}
-		if (score >= 0 && score <=  17) {
-				view.showNotification("Your in a good mood today!");
-			}else if (score >= 18 && score <=  35){
-				view.showNotification("You should take it easy today. Try to relax.");
-			}else {
-				view.showNotification("Please take care of yourself. There are so many good things coming your way.");
-			}
+		
 			
 		if (choice_unset == true) {
 			view.showNotification("Please make sure to make a choice in every Question.");
 		} else {
-			view.setDisplay(model.getMoodScoreAsString());		
+			view.setDisplay(model.getMoodScoreAsString());	
+			if (score >= 0 && score <=  17) {
+			view.showNotification("Your in a good mood today!");
+		}else if (score >= 18 && score <=  35){
+			view.showNotification("You should take it easy today. Try to relax.");
+		}else {
+			view.showNotification("Please take care of yourself. There are so many good things coming your way.");
 		}
+		}
+		
+		
 	}
 	
 
