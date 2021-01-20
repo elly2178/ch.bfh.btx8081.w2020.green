@@ -133,11 +133,15 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        // Attribute: patient's address (street and number)
 	        TextField street = new TextField("Street and number");
 	        setColspan(street, 2);
-	        // Attribute: patient's address (city and postal code)
+	        street.setRequiredIndicatorVisible(true);
+	        // Attribute: patient's address (city)
 	        TextField city = new TextField("City");
+	        setColspan(city, 2);
 	        city.setRequiredIndicatorVisible(true);
+	        // Attribute: patient's address (postal code)
 	        NumberField zip = new NumberField("Postal code");
 	        zip.setRequiredIndicatorVisible(true);
+	        setColspan(zip, 2);
 	        // Attribute: patient's address (country)
 	        ComboBox<String> country = new ComboBox<>();
 	        country.setAllowCustomValue(true);
@@ -156,13 +160,13 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
 	        setColspan(patientInsurance, 2);
 	        patientInsurance.setItems("Assura", "Atupri", "Concordia", "Groupe Mutuel", "Helsana", "Sanitas", "Swica", "Visana", "other");
 	        // Attribute: patient insurance ID
-	        TextField patientInsuranceId = new TextField("Patient Insurance ID");
+	        TextField patientInsuranceId = new TextField("Patient insurance ID number");
 	        setColspan(patientInsuranceId, 2);
 	        patientInsuranceId.setRequiredIndicatorVisible(true);
 	        
 	        
 
-	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email, street, city, zip, country, phone, 
+	        FormLayout form = new FormLayout(firstName, secondName, gender, birthDate, email, phone, street, zip, city, country, 
 	        		patientInsurance, patientInsuranceId);
 	        form.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 4));
 
