@@ -7,6 +7,10 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * Class representing a patient.
+ */
+
 @Entity
 @Table(name = "patients")
 public class Patient extends Person implements Serializable {

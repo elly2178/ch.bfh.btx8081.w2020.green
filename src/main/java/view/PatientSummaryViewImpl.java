@@ -201,14 +201,12 @@ public class PatientSummaryViewImpl extends VerticalLayout implements PatientSum
             		.withValidator(new StringLengthValidator(
             				"Please add the birthdate", 1, null))
             		.bind(Patient::getBirthDate, Patient::setBirthDate);
-*/
+	        */
 
-	        
+	        // E-mail and phone have specific validators
 	        SerializablePredicate<String> phoneOrEmailPredicate = value -> 
 	        	!email.getValue().trim().isEmpty();
-	        	
-	        
-	        // E-mail and phone have specific validators
+	        		        
 	        Binding<Patient, String> emailBinding = binder.forField(email)
 	                .withValidator(new EmailValidator("Incorrect email address"))
 	                .bind(Patient::getEmail, Patient::setEmail);
