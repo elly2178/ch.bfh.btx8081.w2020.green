@@ -12,13 +12,11 @@
     <class>model.YbocsModel</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://147.87.116.213:5432/jimen1" /> <!-- BD Mane -->
-      <property name="javax.persistence.jdbc.user" value="Studierende" /> <!-- DB User -->
-      <property name="javax.persistence.jdbc.password" value="db-2017" /> <!-- DB Password -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost" /> <!-- BD Mane -->
+      <property name="javax.persistence.jdbc.user" value="DB User" /> <!-- DB User -->
+      <property name="javax.persistence.jdbc.password" value="DB Password" /> <!-- DB Password -->
       <property name="eclipselink.ddl-generation" value="create-tables" />
       <property name="eclipselink.ddl-generation.output-mode"	value="database" />
-      <property name="hibernate.connection.url" value="jdbc:postgresql://147.87.116.213:5432/jimen1"/>
-      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
 
     </properties>
 

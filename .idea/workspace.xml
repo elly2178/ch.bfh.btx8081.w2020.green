@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Rewrite code for JPA.&#10;Added JPA for Diary">
-      <change afterPath="$PROJECT_DIR$/doc/task07/BTX8081 - Task 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/task07/scrum_v02.xlsx" afterDir="false" />
+    <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Scrum and Task 7 Presentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,17 +114,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.YbocsModelTest.getYbocsScoreAsString">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch.bfh.btx8081.w2020.green" />
       <extension name="coverage">
@@ -333,7 +321,8 @@
       <workItem from="1611151099775" duration="907000" />
       <workItem from="1611180839194" duration="711000" />
       <workItem from="1611211099792" duration="566000" />
-      <workItem from="1611223268017" duration="2148000" />
+      <workItem from="1611223268017" duration="2196000" />
+      <workItem from="1611228061198" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -629,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611223601761</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Scrum and Task 7 Presentation">
+      <created>1611226600961</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1611226600961</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +654,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Typo corrections and adjustments." />
     <MESSAGE value="Domain Model Alex" />
     <MESSAGE value="Added VisualParadigm VPP File." />
     <MESSAGE value="Class Diagram&#10;Deployment Diagram&#10;Component Diagram" />
@@ -683,7 +678,8 @@
     <MESSAGE value="Added Inheritance Strategy" />
     <MESSAGE value="Added Diary commit method" />
     <MESSAGE value="Rewrite code for JPA.&#10;Added JPA for Diary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite code for JPA.&#10;Added JPA for Diary" />
+    <MESSAGE value="Scrum and Task 7 Presentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scrum and Task 7 Presentation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
