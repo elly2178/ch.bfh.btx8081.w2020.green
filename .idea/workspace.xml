@@ -23,8 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d75018-4417-4fe3-9e7d-61bfc20c4e6b" name="Default Changelist" comment="Rewrite code for JPA.&#10;Added JPA for Diary">
-      <change beforePath="$PROJECT_DIR$/doc/litteratur/obsessive-compulsive-disorder-test-yale-brown-ocd-scale-ybocs.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/literatur/obsessive-compulsive-disorder-test-yale-brown-ocd-scale-ybocs.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/litteratur/smfq-rating-scale.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/literatur/smfq-rating-scale.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/task07/BTX8081 - Task 7.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/task07/scrum_v02.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="93f32626-e44a-4c05-8f9c-09bfc8a1e4a0" name="Restore" comment="Restore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +90,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task07" />
       <recent name="C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task06" />
       <recent name="C:\Users\norma\IdeaProjects\ch.bfh.btx8081.w2020.green\doc\task02\domain_models" />
       <recent name="$PROJECT_DIR$/doc/task02" />
@@ -331,7 +333,7 @@
       <workItem from="1611151099775" duration="907000" />
       <workItem from="1611180839194" duration="711000" />
       <workItem from="1611211099792" duration="566000" />
-      <workItem from="1611223268017" duration="324000" />
+      <workItem from="1611223268017" duration="2148000" />
     </task>
     <task id="LOCAL-00001" summary="Just formatting some text">
       <created>1603583548267</created>
@@ -620,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611082336936</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Rewrite code for JPA.&#10;Added JPA for Diary">
+      <created>1611223601761</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1611223601761</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
